@@ -97,6 +97,6 @@
         <value>Verificar Credencial</value>
     </data>
     <data name="Resume_DownloadPDF" xml:space="preserve">
-        <value>Baixar Currículo (PDF)</value>
+        <value>Descargar CV (PDF)</value>
     </data>
 </root>
