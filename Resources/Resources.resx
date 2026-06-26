@@ -31,7 +31,7 @@
         <value>./all_projects</value>
     </data>
     <data name="Projects_PageSubtitle" xml:space="preserve">
-        <value>A detailed history of architected solutions, built utilities, and modernized legacy systems.</value>
+        <value>A collection of professional and personal projects. Includes enterprise system integrations, mobile apps, and custom utilities.</value>
     </data>
     <data name="NotFound_ErrorTitle" xml:space="preserve">
         <value>Error 404 | Page Not Found</value>
