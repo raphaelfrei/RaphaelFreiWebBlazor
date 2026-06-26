@@ -1,0 +1,65 @@
+@using RaphaelFreiWeb.Models
+@using Microsoft.Extensions.Localization
+@using RaphaelFreiWeb.Helpers
+@using RaphaelFreiWeb.Resources
+@inject IStringLocalizer<Resources> Loc
+
+<div class="timeline-item">
+    
+    <!-- Empresa -->
+    <div class="timeline-header company-main">
+        <h3 class="company-title"><span class="syntax-keyword">@@</span> <span class="spacer"></span> @Item.Company</h3>
+
+        <div class="period-container">
+            <span class="period total-period">@DateDisplay.GetPeriodDisplay(Item.StartDate, Item.EndDate, Loc)</span>
+            <span class="duration"> • @DateDisplay.GetDurationDisplay(Item.StartDate, Item.EndDate, Loc)</span>
+        </div>
+    </div>
+
+    <!-- Lista de Cargos -->
+    <div class="positions-container">
+        @foreach (var pos in Item.Positions) {
+            <div class="position-item">
+                <div class="timeline-header">
+                    <h4 class="role">@pos.Role</h4>
+                    @if (Item.Positions.Count > 1) {
+                        <div class="period-container">
+                            <span class="period">@DateDisplay.GetPeriodDisplay(pos.StartDate, pos.EndDate, Loc)</span>
+                        </div>
+                    }
+                </div>
+                <p class="description">@pos.Description</p>
+
+                <div class="stacks-container">
+                    @if (pos.SoftwareStack.Any()) {
+                        <div class="stack-group">
+                            <span class="stack-label">Software:</span>
+                            <div class="repo-tech">
+                                @foreach (var tech in pos.SoftwareStack) {
+                                    <span class="tech-badge">@tech</span>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    @if (pos.DatabaseStack.Any()) {
+                        <div class="stack-group">
+                            <span class="stack-label">Database:</span>
+                            <div class="repo-tech">
+                                @foreach (var db in pos.DatabaseStack) {
+                                    <span class="tech-badge db-badge">@db</span>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public Experience Item { get; set; } = default!;
+
+}

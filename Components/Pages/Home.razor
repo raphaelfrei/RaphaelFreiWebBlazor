@@ -1,0 +1,74 @@
+﻿@page "/"
+@using RaphaelFreiWeb.Components.Cards
+@using RaphaelFreiWeb.Models
+@using RaphaelFreiWeb.Models.Enums
+@using RaphaelFreiWeb.Repositories.Interfaces
+@inject IProjectRepository Repository
+
+<PageTitle>@Loc["Home_PageTitle"]</PageTitle>
+
+<div class="dev-container">
+
+    <header class="terminal-hero">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <span class="dot close"></span>
+                <span class="dot minimize"></span>
+                <span class="dot expand"></span>
+            </div>
+            <span class="terminal-title">~/portfolio</span>
+        </div>
+        <div class="terminal-body">
+            <h1 class="dev-name">
+                <span class="accent">const</span> <span class="variable">developer</span> = <span class="string">"Raphael Frei"</span>;
+            </h1>
+            <p class="dev-role">@Loc["Home_DevRole"]</p>
+            <p class="dev-desc">
+                @Loc["Home_DevDesc"]
+            </p>
+            <div class="tech-stack-display">
+                <span class="tech-item">Blazor</span>
+                <span class="tech-item">.NET MAUI</span>
+                <span class="tech-item">Progress 4GL</span>
+                <span class="tech-item">PostgreSQL</span>
+                <span class="tech-item">SQLite</span>
+            </div>
+            
+            <div class="social-links">
+                <span class="terminal-prompt">➜</span>
+                <a href="https://github.com/raphaelfrei" target="_blank" class="social-link">github</a>
+                <span class="separator">/</span>
+                <a href="https://linkedin.com/in/raphaelrfrei" target="_blank" class="social-link">linkedin</a>
+                <span class="separator">/</span>
+                <a href="mailto:raphaelrfrei@gmail.com" class="social-link">email</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="repos-section">
+        <h2 class="section-title"><span class="accent">#</span> @Loc["Home_DeployedProjects"]</h2>
+        
+        <div class="bento-grid">
+            @foreach (var project in _projects) {
+                <ProjectCard Project="project"/>
+            }
+        </div>
+        
+        <div class="view-more-container">
+            <a href="/projects" class="btn-terminal">
+                <span class="accent">ls</span> -a @Loc["Home_AllProjectsBtn"] <span class="arrow">→</span>
+            </a>
+        </div>
+        
+    </section>
+</div>
+
+@code {
+    
+    private List<Project> _projects = new();
+
+    protected override async Task OnInitializedAsync() {
+        var proj = await Repository.GetTopProjectsAsync();
+        _projects = proj.ToList();
+    }
+}

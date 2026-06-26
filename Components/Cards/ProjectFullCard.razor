@@ -1,0 +1,82 @@
+@using RaphaelFreiWeb.Helpers
+@using RaphaelFreiWeb.Models
+@using RaphaelFreiWeb.Models.Enums
+
+<article class="full-repo-card @(Project.Type == ProjectType.Enterprise ? "featured-full-repo" : "")">
+    
+    <div class="full-repo-top-meta">
+        <div class="meta-left">
+            <div class="period-container">
+                <span class="project-year">
+                    @DateDisplay.GetDateDisplay(Project, Loc)
+                </span>
+        
+                @{
+                    var duration = DateDisplay.GetDurationDisplay(Project.Created, Project.Finished, Loc);
+                    if (!string.IsNullOrEmpty(duration)) {
+                        <span class="duration"> • @duration</span>
+                    }
+                }
+            </div>
+            @if (Project.Type == ProjectType.Enterprise) {
+                <span class="tech-badge enterprise-badge" style="border-color: #e5c07b; color: #e5c07b;">Enterprise</span>
+            } else {
+                <span class="tech-badge" style="border-color: var(--border-subtle); color: var(--text-muted);">Personal</span>
+            }
+        </div>
+        
+        <div class="repo-actions">
+            @if (!string.IsNullOrEmpty(Project.RepositoryUrl)) {
+                <a href="@Project.RepositoryUrl" target="_blank" class="external-icon" title="View Source Code">
+                    <i class="bi bi-github"></i>
+                </a>
+            }
+            @if (!string.IsNullOrEmpty(TargetUrl)) {
+                <a href="@TargetUrl" target="@TargetAttribute" class="external-icon" title="View Project">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            }
+        </div>
+    </div>
+
+    <div class="full-repo-title-group">
+        <i class="bi bi-journal-code repo-icon"></i>
+        <h2 class="project-title">@Project.Title</h2>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Project.Role) || !string.IsNullOrEmpty(Project.Company)) {
+        <p class="project-role">
+            @if (!string.IsNullOrEmpty(Project.Role)) {
+                <span class="accent">Role: </span> @Project.Role
+            }
+            @if (!string.IsNullOrEmpty(Project.Company)) {
+                <span class="syntax-keyword">&nbsp;@@</span><span>&nbsp;</span>@Project.Company
+            }
+        </p>
+    }
+
+    <p class="project-desc">@Project.Description</p>
+
+    @if (Project.Highlights != null && Project.Highlights.Any()) {
+        <ul class="project-highlights">
+            @foreach (var highlight in Project.Highlights) {
+                <li>@highlight</li>
+            }
+        </ul>
+    }
+
+    <div class="repo-tech mt-auto">
+        @foreach (var tag in Project.Tags) {
+            <span class="tech-badge">@tag</span>
+        }
+    </div>
+</article>
+
+@code {
+    [Parameter, EditorRequired]
+    public Project Project { get; set; } = default!;
+
+    private string TargetUrl => !string.IsNullOrEmpty(Project.InternalSlug) ? Project.InternalSlug : Project.ExternalUrl;
+    private string TargetAttribute => string.IsNullOrEmpty(Project.InternalSlug) ? "_blank" : "_self";
+    
+}

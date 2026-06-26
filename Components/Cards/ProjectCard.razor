@@ -1,0 +1,45 @@
+@using RaphaelFreiWeb.Models
+@using RaphaelFreiWeb.Models.Enums
+
+@{
+    var linkDestiny = !string.IsNullOrEmpty(Project.InternalSlug) ? Project.InternalSlug : Project.ExternalUrl;
+    var openNewTab = string.IsNullOrEmpty(Project.InternalSlug) ? "_blank" : "_self";
+    var showClass = Project.Type == ProjectType.Enterprise ? "repo-card-featured" : "";
+}
+
+<a href="@linkDestiny" target="@openNewTab" class="repo-card @showClass">
+    <div class="repo-top">
+        
+        <!-- Bloco da Esquerda -->
+        <div class="repo-title-group">
+            <i class="bi bi-journal-code repo-icon"></i>
+            <h3 class="repo-name">@Project.Title</h3>
+        </div>
+
+        <!-- Bloco da Direita -->
+        <div class="repo-actions">
+            @if (Project.Type == ProjectType.Enterprise) {
+                <span class="tech-badge enterprise-badge" style="border-color: #e5c07b; color: #e5c07b;">
+                    Enterprise
+                </span>
+            }
+            @if (openNewTab == "_blank" && !string.IsNullOrEmpty(Project.ExternalUrl)) {
+                <i class="bi bi-box-arrow-up-right external-icon"></i>
+            }
+        </div>
+
+    </div>
+    
+    <p class="repo-desc">@Project.Description</p>
+    
+    <div class="repo-tech">
+        @foreach (var tag in Project.Tags) {
+            <span class="tech-badge">@tag</span>
+        }
+    </div>
+</a>
+
+@code {
+    [Parameter, EditorRequired]
+    public Project Project { get; set; } = default!;
+}

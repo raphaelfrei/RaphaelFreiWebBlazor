@@ -1,0 +1,41 @@
+﻿@page "/not-found"
+@layout MainLayout
+
+<PageTitle>@Loc["NotFound_PageTitle"]</PageTitle>
+
+<div class="dev-container" style="display: flex; align-items: center; min-height: 70vh;">
+    <header class="terminal-hero" style="width: 100%; margin: 0;">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <span class="dot close"></span>
+                <span class="dot minimize"></span>
+                <span class="dot expand"></span>
+            </div>
+            <span class="terminal-title">Exception</span>
+        </div>
+        <div class="terminal-body">
+            <!-- Simula um comando que falhou -->
+            <p style="font-family: var(--font-mono); color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+                <span class="terminal-prompt" style="color: #ff5f56;">➜</span> <span class="accent">cat</span> requested_route
+            </p>
+            
+            <h1 class="dev-name" style="margin-top: 1.5rem; color: #ff5f56; font-size: 1.5rem;">
+                cat: requested_route: No such file or directory
+            </h1>
+            
+            <p class="dev-role" style="margin-top: 1rem; color: var(--text-main);">
+                @Loc["NotFound_ErrorTitle"]
+            </p>
+            
+            <p class="dev-desc">
+                @Loc["NotFound_ErrorDesc"]
+            </p>
+
+            <div class="view-more-container" style="justify-content: flex-start; margin-top: 3rem;">
+                <a href="/" class="btn-terminal">
+                    <span class="accent">cd</span> @Loc["NotFound_HomeBtn"] <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </header>
+</div>

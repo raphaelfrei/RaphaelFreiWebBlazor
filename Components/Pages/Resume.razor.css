@@ -1,0 +1,297 @@
+.resume-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.terminal-window {
+    background-color: var(--background);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.terminal-window:hover {
+    transform: translateY(-2px);
+}
+
+.experience-terminal:hover { border-color: #27c93f; }
+.education-terminal:hover { border-color: #ffbd2e; }
+.skills-terminal:hover { border-color: #bb86fc; }
+.languages-terminal:hover { border-color: #56b6c2; }
+
+.terminal-header {
+    background-color: #1a1b20;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    position: relative;
+}
+
+.window-controls {
+    display: flex;
+    gap: 0.4rem;
+    position: absolute;
+    left: 1rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.close { background-color: #ff5f56; }
+.minimize { background-color: #ffbd2e; }
+.expand { background-color: #27c93f; }
+
+.terminal-title {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin: 0 auto;
+}
+
+.terminal-body {
+    padding: 2rem;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.languages-flex {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+}
+
+.string-literal {
+    color: #e5c07b;
+}
+
+.btn-download-pdf {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    color: var(--text-main);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-download-pdf i {
+    color: #ff5f56; 
+    font-size: 1.1rem;
+}
+
+.btn-download-pdf:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background-color: rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px);
+}
+
+::deep .timeline-item {
+    position: relative;
+}
+
+::deep .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.85rem;
+    top: 0.4rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: var(--background);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+}
+
+::deep .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+::deep .role {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0;
+}
+
+::deep .period {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+::deep .company {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0 0 0.5rem 0;
+}
+
+::deep .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+::deep .spacer {
+    display: inline-block;
+    width: 0.5ch;
+}
+
+::deep .company-main {
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--border-subtle);
+    padding-bottom: 0.5rem;
+}
+
+::deep .company-title {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    margin: 0;
+}
+
+::deep .total-period {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+::deep .positions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--border-subtle);
+    margin-left: 0.5rem;
+}
+
+::deep .position-item {
+    position: relative;
+}
+
+::deep .position-item::before {
+    content: '';
+    position: absolute;
+    left: -1.35rem;
+    top: 0.4rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: var(--border-subtle);
+    border-radius: 50%;
+}
+
+::deep .stacks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+::deep .stack-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+::deep .stack-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    min-width: 70px;
+}
+
+::deep .db-badge {
+    background-color: rgba(56, 189, 248, 0.1) !important;
+    color: #38bdf8 !important;
+    border-color: rgba(56, 189, 248, 0.2) !important;
+}
+
+::deep .period-container {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+::deep .credential-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+}
+
+::deep .credential-id {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+::deep .credential-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--border-subtle);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+::deep .credential-link:hover {
+    background-color: var(--accent);
+    color: var(--background);
+    border-color: var(--accent);
+}
+
+::deep .location {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+::deep .certifications-grid .timeline-item {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 1.25rem;
+    background-color: var(--background);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+::deep .certifications-grid .timeline-item::before {
+    display: none;
+}
+
+::deep .certifications-grid .timeline-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}

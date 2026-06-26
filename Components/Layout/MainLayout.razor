@@ -1,0 +1,60 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page-wrapper">
+    
+    <header class="top-header">
+        <div class="header-container">
+            <a href="/" class="brand-logo">
+                <span class="accent">~/</span>raphaelfrei
+            </a>
+            <nav class="header-nav">
+                <a href="/projects" class="nav-link">@Loc["Nav_Projects"]</a>
+                <a href="/resume" class="nav-link">@Loc["Nav_Resume"]</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        @Body
+    </main>
+
+    <footer class="bottom-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>© @YearDetails() Raphael Frei. All rights reserved.</p>
+                <p class="built-with">Built with <span class="accent">.NET Blazor</span>.</p>
+            </div>
+
+            <div class="footer-actions">
+                
+                <div class="store-links">
+                    <a href="SEU_LINK_APPLE_DEVELOPER" target="_blank" class="store-link">
+                        App Store
+                    </a>
+                    <span class="separator">/</span>
+                    <a href="SEU_LINK_GOOGLE_PLAY" target="_blank" class="store-link">
+                        Google Play
+                    </a>
+                </div>
+
+                <div class="language-wrapper">
+                    <CultureSelector/>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+@code{
+
+    private string YearDetails () {
+        
+        int startYear = 2021;
+        
+        int currentYear = DateTime.Now.Year;
+        
+        return currentYear == startYear ? currentYear.ToString() : $"{startYear} - {currentYear}";
+
+    }
+
+}

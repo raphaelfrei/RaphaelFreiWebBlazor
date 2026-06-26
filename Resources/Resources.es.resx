@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Home_AllProjectsBtn" xml:space="preserve">
+        <value>./todos_los_proyectos</value>
+    </data>
+    <data name="Home_DeployedProjects" xml:space="preserve">
+        <value>proyectos_publicados</value>
+    </data>
+    <data name="Home_DevDesc" xml:space="preserve">
+        <value>Desarrollador de Software con experiencia en sistemas full-stack, escritorio, móvil y modernización de legados. Especialista en el ecosistema .NET (WinForms, WPF, MAUI, Avalonia) y Progress 4GL (desarrollo de aplicaciones y bases de datos).</value>
+    </data>
+    <data name="Home_DevRole" xml:space="preserve">
+        <value>Ingeniero de Software • Arquitecto .NET &amp; Experto en Progress 4GL</value>
+    </data>
+    <data name="NotFound_ErrorDesc" xml:space="preserve">
+        <value>El contenido que estás buscando no existe, ha sido movido o está temporalmente no disponible en la arquitectura actual.</value>
+    </data>
+    <data name="NotFound_ErrorTitle" xml:space="preserve">
+        <value>Error 404 | Página No Encontrada</value>
+    </data>
+    <data name="NotFound_HomeBtn" xml:space="preserve">
+        <value>~/portafolio</value>
+    </data>
+    <data name="Projects_PageSubtitle" xml:space="preserve">
+        <value>Un historial detallado de soluciones arquitectadas, utilidades construidas y sistemas heredados modernizados.</value>
+    </data>
+    <data name="Nav_Projects" xml:space="preserve">
+        <value>Proyectos</value>
+    </data>
+    <data name="Nav_Resume" xml:space="preserve">
+        <value>Currículum</value>
+    </data>
+    <data name="Projects_PageTitle" xml:space="preserve">
+        <value>Todos los Proyectos | Raphael Frei</value>
+    </data>
+    <data name="NotFound_PageTitle" xml:space="preserve">
+        <value>404 No Encontrado | Raphael Frei</value>
+    </data>
+    <data name="Home_PageTitle" xml:space="preserve">
+        <value>Raphael Frei | Ingeniero de Software</value>
+    </data>
+    <data name="Date_Present" xml:space="preserve">
+        <value>Actualidad</value>
+    </data>
+    <data name="Date_InDevelopment" xml:space="preserve">
+        <value>En Desarrollo</value>
+    </data>
+    <data name="Resume_PageTitle" xml:space="preserve">
+        <value>Currículum | Raphael Frei</value>
+    </data>
+    <data name="Resume_PageSubtitle" xml:space="preserve">
+        <value>Historial profesional y formación académica.</value>
+    </data>
+    <data name="Resume_Experience" xml:space="preserve">
+        <value>Experiencia Profesional</value>
+    </data>
+    <data name="Resume_Education" xml:space="preserve">
+        <value>Formación Académica</value>
+    </data>
+    <data name="Resume_Skills" xml:space="preserve">
+        <value>Certificaciones y Habilidades</value>
+    </data>
+    <data name="Time_Year" xml:space="preserve">
+        <value>año</value>
+    </data>
+    <data name="Time_Years" xml:space="preserve">
+        <value>años</value>
+    </data>
+    <data name="Time_Month" xml:space="preserve">
+        <value>mes</value>
+    </data>
+    <data name="Time_Months" xml:space="preserve">
+        <value>meses</value>
+    </data>
+    <data name="Time_LessOneMonth" xml:space="preserve">
+        <value>&lt; 1 mes</value>
+    </data>
+    <data name="Cert_Verify" xml:space="preserve">
+        <value>Verificar Credencial</value>
+    </data>
+    <data name="Resume_DownloadPDF" xml:space="preserve">
+        <value>Baixar Currículo (PDF)</value>
+    </data>
+</root>

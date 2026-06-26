@@ -1,0 +1,154 @@
+@page "/resume"
+@using RaphaelFreiWeb.Models
+@using Microsoft.Extensions.Localization
+@using RaphaelFreiWeb.Components.Cards
+@using RaphaelFreiWeb.Repositories.Interfaces
+@using RaphaelFreiWeb.Resources
+@inject IStringLocalizer<Resources> Loc
+@inject IExperienceRepository ExpRepo
+@inject IEducationRepository EduRepo
+@inject ICertificateRepository CertRepo
+
+<PageTitle>@Loc["Resume_PageTitle"]</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="Professional background, academic history, and certifications." />
+    <meta property="og:title" content="Resume | Raphael Frei" />
+    <meta property="og:description" content="Professional background, academic history, and certifications." />
+</HeadContent>
+
+<div class="dev-container">
+    <header class="page-header" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+        <div>
+            <h1 class="page-title"><span class="accent">cat</span> ./resume.md</h1>
+            <p class="page-subtitle">@Loc["Resume_PageSubtitle"]</p>
+        </div>
+        
+        <a href="@GetResumePdfUrl()" download class="btn-download-pdf">
+            <i class="bi bi-file-earmark-pdf"></i>
+            <span style="margin-left: 0.5rem;">@Loc["Resume_DownloadPDF"]</span>
+        </a>
+    </header>
+
+    <div class="resume-content">
+        
+        <!-- Terminal: Experiência Profissional -->
+        <section class="terminal-hero experience-terminal">
+            <div class="terminal-header">
+                <div class="window-controls">
+                    <span class="dot close"></span>
+                    <span class="dot minimize"></span>
+                    <span class="dot expand"></span>
+                </div>
+                <span class="terminal-title">~/work_experience.sh</span>
+            </div>
+            <div class="terminal-body">
+                <h2 class="section-title" style="display: none;">@Loc["Resume_Experience"]</h2>
+                <div class="timeline">
+                    @foreach (var exp in _experiences) {
+                        <ExperienceItemCard Item="exp" />
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Terminal: Educação -->
+        <section class="terminal-hero education-terminal">
+            <div class="terminal-header">
+                <div class="window-controls">
+                    <span class="dot close"></span>
+                    <span class="dot minimize"></span>
+                    <span class="dot expand"></span>
+                </div>
+                <span class="terminal-title">~/education.json</span>
+            </div>
+            <div class="terminal-body">
+                <h2 class="section-title" style="display: none;">@Loc["Resume_Education"]</h2>
+                <div class="timeline">
+                    @foreach (var edu in _education) {
+                        <EducationItemCard Item="edu" />
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Terminal: Certificados e Skills -->
+        @if (_certifications.Any()) {
+            <section class="terminal-hero skills-terminal">
+                <div class="terminal-header">
+                    <div class="window-controls">
+                        <span class="dot close"></span>
+                        <span class="dot minimize"></span>
+                        <span class="dot expand"></span>
+                    </div>
+                    <span class="terminal-title">~/skills.yml</span>
+                </div>
+                <div class="terminal-body">
+                    <h2 class="section-title" style="display: none;">@Loc["Resume_Skills"]</h2>
+            
+                    <div class="certifications-grid">
+                        @foreach (var cert in _certifications) {
+                            <CertificationItemCard Item="cert" />
+                        }
+                    </div>
+            
+                </div>
+            </section>
+        }
+        
+        <!-- Terminal: Idiomas / Locale -->
+        <section class="terminal-window languages-terminal" style="margin-bottom: 2.5rem;">
+            <div class="terminal-header">
+                <div class="window-controls">
+                    <span class="dot close"></span>
+                    <span class="dot minimize"></span>
+                    <span class="dot expand"></span>
+                </div>
+                <span class="terminal-title">~/locale.sh</span>
+            </div>
+            <div class="terminal-body" style="padding: 1.5rem 2rem;">
+                <div class="languages-flex" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <div class="lang-item">
+                        <span class="syntax-keyword">export</span> LANG_PT=<span class="string-literal">"Português (Nativo)"</span>
+                    </div>
+                    <div class="lang-item">
+                        <span class="syntax-keyword">export</span> LANG_EN=<span class="string-literal">"English (C1 Advanced)"</span>
+                    </div>
+                    <div class="lang-item">
+                        <span class="syntax-keyword">export</span> LANG_ES=<span class="string-literal">"Español (Básico)"</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+@code {
+    private List<Experience> _experiences = new();
+    private List<Education> _education = new();
+    private List<Certification> _certifications = new();
+
+    protected override async Task OnInitializedAsync() {
+
+        var exp = await ExpRepo.GetAllAsync(); 
+        _experiences = exp.ToList();
+
+        var edu = await EduRepo.GetAllAsync();
+        _education = edu.ToList();
+        
+        var certs = await CertRepo.GetAllAsync();
+        _certifications = certs.ToList();
+        
+    }
+    
+    private string GetResumePdfUrl() {
+        var culture = System.Threading.Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName;
+        
+        return culture switch {
+            //"pt" => "/assets/Raphael_Frei_CV_PT.pdf",
+            //"es" => "/assets/Raphael_Frei_CV_ES.pdf",
+            _ => "/assets/Raphael_Frei_Resume.pdf"
+        };
+    }
+}

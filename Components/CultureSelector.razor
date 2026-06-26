@@ -1,0 +1,18 @@
+@inject NavigationManager Navigation
+
+<div class="culture-selector">
+    <span class="terminal-comment">// lang:</span>
+    <a href="/Culture/SetCulture?culture=en&redirectUri=@EncodedCurrentUri" class="lang-link @(IsActive("en") ? "active" : "")">en</a>
+    <span class="selector-separator">|</span>
+    <a href="/Culture/SetCulture?culture=pt&redirectUri=@EncodedCurrentUri" class="lang-link @(IsActive("pt") ? "active" : "")">pt</a>
+    <span class="selector-separator">|</span>
+    <a href="/Culture/SetCulture?culture=es&redirectUri=@EncodedCurrentUri" class="lang-link @(IsActive("es") ? "active" : "")">es</a>
+</div>
+
+@code {
+    private string EncodedCurrentUri => Uri.EscapeDataString(Navigation.Uri);
+
+    private bool IsActive(string cultureCode) {
+        return System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName.Equals(cultureCode, StringComparison.OrdinalIgnoreCase);
+    }
+}

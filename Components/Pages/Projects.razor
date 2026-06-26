@@ -1,0 +1,35 @@
+@page "/projects"
+@using RaphaelFreiWeb.Components.Cards
+@using RaphaelFreiWeb.Models
+@using RaphaelFreiWeb.Repositories.Interfaces
+@inject IProjectRepository Repository
+
+<PageTitle>@Loc["Projects_PageTitle"]</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="Professional and personal projects." />
+    <meta property="og:title" content="Projects | Raphael Frei" />
+    <meta property="og:description" content="Professional and personal projects." />
+</HeadContent>
+
+<div class="dev-container">
+    <header class="page-header">
+        <h1 class="page-title"><span class="accent">ls</span> -la ./all_projects</h1>
+        <p class="page-subtitle">@Loc["Projects_PageSubtitle"]</p>
+    </header>
+
+    <div class="project-list">
+        @foreach (var project in _projects) {
+            <ProjectFullCard Project="project" />
+        }
+    </div>
+</div>
+
+@code {
+    private List<Project> _projects = new();
+
+    protected override async Task OnInitializedAsync() {
+        var proj = await Repository.GetAllAsync();
+        _projects = proj.ToList();
+    }
+}

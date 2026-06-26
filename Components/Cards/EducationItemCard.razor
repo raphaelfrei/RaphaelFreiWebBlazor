@@ -1,0 +1,31 @@
+@using RaphaelFreiWeb.Models
+@using Microsoft.Extensions.Localization
+@using RaphaelFreiWeb.Helpers
+@using RaphaelFreiWeb.Resources
+@inject IStringLocalizer<Resources> Loc
+
+<div class="timeline-item">
+
+    <div class="timeline-header">
+        <h3 class="role">@Item.Degree</h3>
+        <div class="period-container">
+            <span class="period">@DateDisplay.GetPeriodDisplay(Item.StartDate, Item.EndDate, Loc)</span>
+        </div>
+    </div>
+
+    <p class="company">
+        <span class="syntax-keyword">@@</span> <span class="spacer"></span> @Item.Institution
+        @if (!string.IsNullOrEmpty(Item.Location)) {
+            <span class="location"> • @Item.Location</span>
+        }
+    </p>
+
+    @if (!string.IsNullOrEmpty(Item.Description)) {
+        <p class="description" style="margin-top: 0.5rem;">@Item.Description</p>
+    }
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public Education Item { get; set; } = default!;
+}

@@ -1,0 +1,53 @@
+@using RaphaelFreiWeb.Models
+@using Microsoft.Extensions.Localization
+@using RaphaelFreiWeb.Helpers
+@using RaphaelFreiWeb.Resources
+@inject IStringLocalizer<Resources> Loc
+
+<div class="timeline-item">
+    
+    <div class="cert-top-meta" style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div class="timeline-header" style="margin-bottom: 0;">
+            <h3 class="role">@Item.Name</h3>
+            <div class="period-container">
+                <span class="period">@DateDisplay.GetPeriodDisplay(Item.IssueDate, Item.ExpirationDate, Loc)</span>
+            </div>
+        </div>
+        
+        @if (!string.IsNullOrEmpty(Item.CredentialUrl)) {
+            <div class="repo-actions">
+                <a href="@Item.CredentialUrl" target="_blank" class="external-icon" title="@Loc["Cert_Verify"]">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+        }
+    </div>
+    
+    <!-- Credential Company -->
+    <p class="company" style="margin-top: 0.25rem;">
+        <span class="syntax-keyword">@@</span> <span class="spacer"></span> @Item.Issuer
+    </p>
+
+    <!-- Credential ID -->
+    @if (!string.IsNullOrEmpty(Item.CredentialId)) {
+        <div class="credential-info">
+            <span class="credential-id">
+                <span class="accent">ID:</span> @Item.CredentialId
+            </span>
+        </div>
+    }
+
+    <!-- Credential Tags -->
+    @if (Item.Tags.Any()) {
+        <div class="repo-tech" style="margin-top: 1rem;">
+            @foreach (var tag in Item.Tags) {
+                <span class="tech-badge">@tag</span>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public Certification Item { get; set; } = default!;
+}

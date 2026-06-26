@@ -1,0 +1,31 @@
+.page-header {
+    margin-bottom: 4rem;
+    border-bottom: 1px dashed var(--border-subtle);
+    padding-bottom: 2rem;
+}
+
+.page-title {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: var(--text-main);
+}
+
+.page-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* ESSENCIAL: É isso que cria o espaço elegante entre um projeto e outro */
+}
+
+/* O jeito correto no Blazor de remover a borda inferior do último card da lista */
+::deep .detailed-project-item:last-of-type .project-content {
+    border-bottom: none;
+    padding-bottom: 0;
+}
