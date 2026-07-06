@@ -1,0 +1,115 @@
+.page-header {
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.page-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.app-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.app-card {
+    background-color: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    gap: 2.5rem;
+    transition: all 0.2s ease;
+    align-items: center;
+}
+
+.app-card:hover {
+    background-color: var(--bg-surface);
+    border-color: var(--border-highlight);
+    transform: translateY(-2px);
+}
+
+.app-icon-container {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+}
+
+.app-icon, .app-icon-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 22.5%;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.app-icon-placeholder {
+    background-color: #1e1e24; /* Um pouco mais claro que o bg pra dar contraste */
+    border: 1px solid var(--border-highlight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 3rem;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.app-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-main);
+}
+
+.app-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+}
+
+/* O .repo-tech e .tech-badge já existem globalmente, mas podemos dar um margin */
+.repo-tech {
+    margin-bottom: 1.5rem;
+}
+
+.app-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* O .btn-terminal já existe globalmente! */
+
+@media (max-width: 768px) {
+    .app-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .repo-tech {
+        justify-content: center;
+    }
+    
+    .app-actions {
+        justify-content: center;
+    }
+}

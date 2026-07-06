@@ -1,0 +1,98 @@
+@page "/apps"
+@using RaphaelFreiWeb.Models
+@using RaphaelFreiWeb.Repositories.Interfaces
+@using Microsoft.Extensions.Localization
+@using RaphaelFreiWeb.Resources
+@inject IStringLocalizer<Resources> Loc
+@inject IAppRepository Repository
+
+<PageTitle>@Loc["Apps_PageTitle"]</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="My published applications." />
+</HeadContent>
+
+<div class="dev-container">
+    <header class="page-header">
+        <h1 class="page-title"><span class="accent">ls</span> -la ./apps</h1>
+        <p class="page-subtitle">@Loc["Apps_PageSubtitle"]</p>
+    </header>
+    
+    @if (apps == null)
+    {
+        <p><em><span class="accent">./</span>@Loc["Apps_Loading"]</em></p>
+    }
+    else
+    {
+        <div class="app-list">
+            @foreach (var app in apps)
+            {
+                <article class="app-card">
+                    <div class="app-icon-container">
+                        @if (!string.IsNullOrEmpty(app.IconUrl))
+                        {
+                            <img src="@app.IconUrl" class="app-icon" alt="Ícone do @app.Name">
+                        }
+                        else
+                        {
+                            <div class="app-icon-placeholder">
+                                <i class="bi bi-app-indicator"></i>
+                            </div>
+                        }
+                    </div>
+                    
+                    <div class="app-content">
+                        <h2 class="app-title">@app.Name</h2>
+                        <p class="app-desc">@app.Description</p>
+                        
+                        @if (app.Tags.Any())
+                        {
+                            <div class="repo-tech">
+                                @foreach (var tag in app.Tags.Take(4))
+                                {
+                                    <span class="tech-badge">@tag</span>
+                                }
+                            </div>
+                        }
+                        
+                        <div class="app-actions">
+                            @if (!string.IsNullOrEmpty(app.GooglePlayUrl))
+                            {
+                                <a href="@app.GooglePlayUrl" target="_blank" class="btn-terminal">
+                                    <i class="bi bi-google-play"></i> Play
+                                </a>
+                            }
+                            @if (!string.IsNullOrEmpty(app.AppStoreUrl))
+                            {
+                                <a href="@app.AppStoreUrl" target="_blank" class="btn-terminal">
+                                    <i class="bi bi-apple"></i> Store
+                                </a>
+                            }
+                            @if (!string.IsNullOrEmpty(app.MicrosoftStoreUrl))
+                            {
+                                <a href="@app.MicrosoftStoreUrl" target="_blank" class="btn-terminal">
+                                    <i class="bi bi-microsoft"></i> MS
+                                </a>
+                            }
+                            @if (!string.IsNullOrEmpty(app.WebsiteUrl))
+                            {
+                                <a href="@app.WebsiteUrl" target="_blank" class="btn-terminal">
+                                    <i class="bi bi-globe"></i> Website
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </article>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private IEnumerable<AppModel>? apps;
+
+    protected override async Task OnInitializedAsync()
+    {
+        apps = await Repository.GetAllAsync();
+    }
+}

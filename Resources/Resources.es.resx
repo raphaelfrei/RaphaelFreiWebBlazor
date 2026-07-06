@@ -99,4 +99,19 @@
     <data name="Resume_DownloadPDF" xml:space="preserve">
         <value>Descargar CV (PDF)</value>
     </data>
+    <data name="Nav_Applications" xml:space="preserve">
+        <value>Aplicaciones</value>
+    </data>
+    <data name="Apps_PageTitle" xml:space="preserve">
+        <value>Aplicaciones | Raphael Frei</value>
+    </data>
+    <data name="Apps_PageSubtitle" xml:space="preserve">
+        <value>Aplicaciones que he desarrollado y publicado en tiendas.</value>
+    </data>
+    <data name="Apps_Loading" xml:space="preserve">
+        <value>Cargando aplicaciones...</value>
+    </data>
+    <data name="Apps_Details" xml:space="preserve">
+        <value>detalles</value>
+    </data>
 </root>
