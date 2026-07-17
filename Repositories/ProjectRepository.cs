@@ -117,7 +117,17 @@ namespace RaphaelFreiWeb.Repositories {
                 Description = "Mobile application for policyholders, featuring digital ID cards, network search, and real-time integration with core healthcare APIs.",
                 Tags = new List<string> { ".NET MAUI", "API Integration" },
                 Created = new DateTime(2024, 01, 01)
-            }
+            },
+            new Project {
+                Title = "Deck DVR - Record Converter",
+                Type = ProjectType.Personal,
+                Role = "Creator",
+                Description = "The easiest way to convert your Steam recordings from .m4s to standard .mp4 format.",
+                Tags = new List<string> { ".NET MAUI", "C#" },
+                ExternalUrl = "https://deckdvr.com/",
+                Created = new DateTime(2026, 06, 01),
+                Finished = new DateTime(2026, 07, 01)
+            },
         };
     }
 }
