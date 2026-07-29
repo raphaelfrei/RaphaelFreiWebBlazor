@@ -114,4 +114,181 @@
     <data name="Apps_Details" xml:space="preserve">
         <value>details</value>
     </data>
+    <data name="Pastory_HeroTitle" xml:space="preserve">
+        <value>Pastory</value>
+    </data>
+    <data name="Pastory_HeroSubtitle" xml:space="preserve">
+        <value>Your clipboard, upgraded.</value>
+    </data>
+    <data name="Pastory_Desc1" xml:space="preserve">
+        <value>Have you ever copied something important, only to accidentally overwrite it a second later? Pastory is the lightweight, native clipboard manager for macOS that remembers everything you copy, so you don't have to.</value>
+    </data>
+    <data name="Pastory_Desc2" xml:space="preserve">
+        <value>Sitting quietly in your menu bar, Pastory keeps a secure, easily accessible history of your copied texts, links, and snippets. It stays completely out of your way until the exact moment you need it.</value>
+    </data>
+    <data name="Pastory_DownloadBtn" xml:space="preserve">
+        <value>Download for macOS</value>
+    </data>
+    <data name="Pastory_FeaturesTitle" xml:space="preserve">
+        <value>Key Features</value>
+    </data>
+    <data name="Pastory_Feature1Title" xml:space="preserve">
+        <value>Always at Hand</value>
+    </data>
+    <data name="Pastory_Feature1Desc" xml:space="preserve">
+        <value>Lives exclusively in your macOS menu bar. No messy dock icons or heavy windows interrupting your workflow.</value>
+    </data>
+    <data name="Pastory_Feature2Title" xml:space="preserve">
+        <value>Native</value>
+    </data>
+    <data name="Pastory_Feature2Desc" xml:space="preserve">
+        <value>Built natively with Swift and SwiftUI to ensure fluid performance and minimal battery consumption.</value>
+    </data>
+    <data name="Pastory_Feature3Title" xml:space="preserve">
+        <value>Privacy First</value>
+    </data>
+    <data name="Pastory_Feature3Desc" xml:space="preserve">
+        <value>Everything you copy is stored locally on your Mac. No external servers, no cloud tracking, and no accounts required.</value>
+    </data>
+    <data name="Pastory_ProBadge" xml:space="preserve">
+        <value>Pastory Pro</value>
+    </data>
+    <data name="Pastory_ProTitle" xml:space="preserve">
+        <value>No Subscriptions!</value>
+    </data>
+    <data name="Pastory_ProDesc" xml:space="preserve">
+        <value>Pastory is completely free to download and use for your essential daily history (up to 30 recent items). Need more power? Upgrade to Pastory Pro with a single, one-time purchase to unlock your full productivity.</value>
+    </data>
+    <data name="Pastory_ProFeature1Title" xml:space="preserve">
+        <value>Unlimited History</value>
+    </data>
+    <data name="Pastory_ProFeature1Desc" xml:space="preserve">
+        <value>Store an endless stream of copied items.</value>
+    </data>
+    <data name="Pastory_ProFeature2Title" xml:space="preserve">
+        <value>Advanced Search</value>
+    </data>
+    <data name="Pastory_ProFeature2Desc" xml:space="preserve">
+        <value>Instantly find specific clips from days or weeks ago.</value>
+    </data>
+    <data name="Pastory_ProFeature3Title" xml:space="preserve">
+        <value>Smart Cleaning</value>
+    </data>
+    <data name="Pastory_ProFeature3Desc" xml:space="preserve">
+        <value>Clear old clip history after a couple days.</value>
+    </data>
+    <data name="Pastory_PrivacyLink" xml:space="preserve">
+        <value>Privacy Policy</value>
+    </data>
+    <data name="PastoryPrivacy_Title" xml:space="preserve">
+        <value>Privacy Policy</value>
+    </data>
+    <data name="PastoryPrivacy_LastUpdated" xml:space="preserve">
+        <value>Last updated: July 28, 2026</value>
+    </data>
+    <data name="PastoryPrivacy_Intro" xml:space="preserve">
+        <value>At Pastory, your privacy is our top priority. We believe that what you copy should stay exactly where it belongs: on your own device.</value>
+    </data>
+    <data name="PastoryPrivacy_H1" xml:space="preserve">
+        <value>1. Local Storage Only</value>
+    </data>
+    <data name="PastoryPrivacy_P1" xml:space="preserve">
+        <value>Pastory operates entirely locally on your macOS device. Everything you copy—texts, links, snippets, and images—is stored directly on your computer's local storage. We do not use external servers, cloud databases, or any third-party storage solutions to store your clipboard history.</value>
+    </data>
+    <data name="PastoryPrivacy_H2" xml:space="preserve">
+        <value>2. No Cloud Tracking or Analytics</value>
+    </data>
+    <data name="PastoryPrivacy_P2" xml:space="preserve">
+        <value>We do not track, collect, or analyze the contents of your clipboard. There are no analytics trackers embedded in Pastory that monitor your usage or send data back to us or any third parties.</value>
+    </data>
+    <data name="PastoryPrivacy_H3" xml:space="preserve">
+        <value>3. No Accounts Required</value>
+    </data>
+    <data name="PastoryPrivacy_P3" xml:space="preserve">
+        <value>Pastory does not require you to create an account, sign in, or provide any personal information to use the app. It is designed to be completely anonymous and standalone.</value>
+    </data>
+    <data name="PastoryPrivacy_H4" xml:space="preserve">
+        <value>4. macOS Permissions</value>
+    </data>
+    <data name="PastoryPrivacy_P4" xml:space="preserve">
+        <value>To function correctly as a clipboard manager, Pastory requires specific macOS permissions to read your system clipboard. This permission is used exclusively for the core functionality of the app and never for data collection.</value>
+    </data>
+    <data name="PastoryPrivacy_H5" xml:space="preserve">
+        <value>5. Your Data, Your Control</value>
+    </data>
+    <data name="PastoryPrivacy_P5" xml:space="preserve">
+        <value>You have full control over your data. You can clear your entire clipboard history at any time directly from the app's preferences. For Pastory Pro users, the Smart Cleaning feature automatically removes old items based on your preferences, ensuring your storage remains clean and secure.</value>
+    </data>
+    <data name="PastoryPrivacy_H6" xml:space="preserve">
+        <value>6. Changes to This Privacy Policy</value>
+    </data>
+    <data name="PastoryPrivacy_P6" xml:space="preserve">
+        <value>If we decide to change our privacy policy, we will post those changes on this page. However, our core commitment to keeping your data local and secure will never change.</value>
+    </data>
+    <data name="PastoryPrivacy_Contact" xml:space="preserve">
+        <value>If you have any questions about this Privacy Policy, please contact us.</value>
+    </data>
+    <data name="Pastory_BackBtn" xml:space="preserve">
+        <value>Back to Pastory</value>
+    </data>
+    <data name="PastoryLayout_BackHome" xml:space="preserve">
+        <value>Back to Home</value>
+    </data>
+    <data name="Pastory_AppName" xml:space="preserve">
+        <value>Pastory</value>
+    </data>
+    <data name="Pastory_BadgeFree" xml:space="preserve">
+        <value>Free</value>
+    </data>
+    <data name="Pastory_ItemCount" xml:space="preserve">
+        <value>30/30 items</value>
+    </data>
+    <data name="Pastory_SearchPlaceholder" xml:space="preserve">
+        <value>Search by keywords (Pro Exclusive)</value>
+    </data>
+    <data name="Pastory_AlertTitle" xml:space="preserve">
+        <value>30 item limit reached</value>
+    </data>
+    <data name="Pastory_AlertDesc" xml:space="preserve">
+        <value>Your app keeps working! New copies replace older records.</value>
+    </data>
+    <data name="Pastory_AlertLink" xml:space="preserve">
+        <value>Unlock unlimited history with Premium</value>
+    </data>
+    <data name="Pastory_Time26s" xml:space="preserve">
+        <value>26 sec ago</value>
+    </data>
+    <data name="Pastory_Time30s" xml:space="preserve">
+        <value>30 sec ago</value>
+    </data>
+    <data name="Pastory_FreePlanTitle" xml:space="preserve">
+        <value>ON PASTORY FREE</value>
+    </data>
+    <data name="Pastory_FreeFeature1" xml:space="preserve">
+        <value>Up to 30 recent items</value>
+    </data>
+    <data name="Pastory_FreeFeature2" xml:space="preserve">
+        <value>Fast global shortcut</value>
+    </data>
+    <data name="Pastory_FreeFeature3" xml:space="preserve">
+        <value>Paste with shortcuts ⌘1 to 5</value>
+    </data>
+    <data name="Pastory_FreeFeature4" xml:space="preserve">
+        <value>Paste into active app</value>
+    </data>
+    <data name="Pastory_ProPlanTitle" xml:space="preserve">
+        <value>EXCLUSIVE ON PASTORY PRO</value>
+    </data>
+    <data name="Pastory_PaymentInfo1" xml:space="preserve">
+        <value>One-time payment. No</value>
+    </data>
+    <data name="Pastory_PaymentInfo2" xml:space="preserve">
+        <value>subscriptions.</value>
+    </data>
+    <data name="Pastory_RestorePurchases" xml:space="preserve">
+        <value>Restore Purchases</value>
+    </data>
+    <data name="Pastory_BuyPro" xml:space="preserve">
+        <value>Buy PRO</value>
+    </data>
 </root>

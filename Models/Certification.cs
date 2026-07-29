@@ -3,7 +3,7 @@ using System;
 namespace RaphaelFreiWeb.Models {
     
     public class Certification {
-        
+        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Issuer { get; set; } = string.Empty;
         

@@ -1,0 +1,230 @@
+@page "/pastory"
+@layout Layout.PastoryLayout
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+
+<PageTitle>@Loc["Pastory_HeroTitle"] - @Loc["Pastory_HeroSubtitle"]</PageTitle>
+
+<div class="pastory-landing">
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="app-icon-wrapper">
+                <img src="/images/pastory-icon.png" alt="@Loc["Pastory_HeroTitle"] Icon" class="app-icon" />
+            </div>
+            
+            <h1 class="hero-title">@Loc["Pastory_HeroTitle"]</h1>
+            <p class="hero-subtitle">@Loc["Pastory_HeroSubtitle"]</p>
+            
+            <div class="hero-description">
+                <p>@Loc["Pastory_Desc1"]</p>
+                <p>@Loc["Pastory_Desc2"]</p>
+            </div>
+            
+            <div class="cta-actions">
+                <a href="@Configuration["AppLinks:PastoryMacStore"]" target="_blank" class="btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    @Loc["Pastory_DownloadBtn"]
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="mac-window">
+                <div class="mac-titlebar">
+                    <div class="mac-buttons">
+                        <div class="mac-btn close"></div>
+                        <div class="mac-btn minimize"></div>
+                        <div class="mac-btn maximize"></div>
+                    </div>
+                </div>
+                <div class="mac-content">
+                    <div class="pastory-ui-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-title">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="4" width="14" height="17" rx="2" fill="#0A84FF"/>
+                                    <path d="M9 4V3C9 2.44772 9.44772 2 10 2H14C14.5523 2 15 2.44772 15 3V4H9Z" fill="#E5E5EA"/>
+                                </svg>
+                                <span>@Loc["Pastory_AppName"]</span>
+                                <span class="badge">@Loc["Pastory_BadgeFree"]</span>
+                            </div>
+                            <div class="mockup-stats">@Loc["Pastory_ItemCount"]</div>
+                        </div>
+                        
+                        <div class="mockup-search">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <span>@Loc["Pastory_SearchPlaceholder"]</span>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0A84FF" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        
+                        <div class="mockup-alert">
+                            <div class="alert-icon">✨</div>
+                            <div class="alert-text">
+                                <strong>@Loc["Pastory_AlertTitle"]</strong>
+                                <span>@Loc["Pastory_AlertDesc"]</span>
+                                <a href="#">@Loc["Pastory_AlertLink"]</a>
+                            </div>
+                        </div>
+                        
+                        <div class="mockup-list">
+                            <div class="mockup-item">
+                                <div class="item-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="12" y2="18"></line></svg>
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-text">The product archive is invalid. The Info.plist must contain a LSApplicationC...</div>
+                                    <div class="item-time">@Loc["Pastory_Time26s"]</div>
+                                </div>
+                            </div>
+                            <div class="mockup-item">
+                                <div class="item-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="12" y2="18"></line></svg>
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-text">The server's response was: '{ code = 90242;...</div>
+                                    <div class="item-time">@Loc["Pastory_Time30s"]</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="features-section">
+        <h2>@Loc["Pastory_FeaturesTitle"]</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(10, 132, 255, 0.1); color: #0A84FF;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>@Loc["Pastory_Feature1Title"]</h3>
+                <p>@Loc["Pastory_Feature1Desc"]</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(191, 90, 242, 0.1); color: #BF5AF2;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                </div>
+                <h3>@Loc["Pastory_Feature2Title"]</h3>
+                <p>@Loc["Pastory_Feature2Desc"]</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon" style="background: rgba(48, 209, 88, 0.1); color: #30D158;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <h3>@Loc["Pastory_Feature3Title"]</h3>
+                <p>@Loc["Pastory_Feature3Desc"]</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pro-section">
+        <div class="pro-content">
+            <div class="pro-header">
+                <span class="pro-sparkle">✨</span>
+                <span class="pro-label">PLAN &amp; LICENSE</span>
+            </div>
+            <div class="pro-card">
+                <div class="pro-card-header">
+                    <h2>@Loc["Pastory_ProBadge"] <span class="badge-free">@Loc["Pastory_BadgeFree"]</span></h2>
+                    <p class="pro-desc">@Loc["Pastory_ProDesc"]</p>
+                </div>
+                
+                <div class="pro-features-cols">
+                    <div class="pro-col">
+                        <h3>@Loc["Pastory_FreePlanTitle"]</h3>
+                        <ul class="pro-list free-list">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                @Loc["Pastory_FreeFeature1"]
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                @Loc["Pastory_FreeFeature2"]
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                @Loc["Pastory_FreeFeature3"]
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                @Loc["Pastory_FreeFeature4"]
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pro-col">
+                        <h3 class="pro-highlight">@Loc["Pastory_ProPlanTitle"]</h3>
+                        <ul class="pro-list pro-only-list">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A84FF" stroke-width="2">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                                <strong>@Loc["Pastory_ProFeature1Title"]</strong>: @Loc["Pastory_ProFeature1Desc"]
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A84FF" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <strong>@Loc["Pastory_ProFeature2Title"]</strong>: @Loc["Pastory_ProFeature2Desc"]
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A84FF" stroke-width="2">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                </svg>
+                                <strong>@Loc["Pastory_ProFeature3Title"]</strong>: @Loc["Pastory_ProFeature3Desc"]
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pro-card-footer">
+                    <div class="payment-info">
+                        @Loc["Pastory_PaymentInfo1"]<br/>@Loc["Pastory_PaymentInfo2"]
+                    </div>
+                    <div class="pro-actions">
+                        <a href="#" class="restore-link">@Loc["Pastory_RestorePurchases"]</a>
+                        <a href="#" class="btn-buy-pro">@Loc["Pastory_BuyPro"]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-links">
+        <a href="/pastory/privacy">@Loc["Pastory_PrivacyLink"]</a>
+    </div>
+</div>

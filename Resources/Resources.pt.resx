@@ -114,4 +114,181 @@
     <data name="Apps_Details" xml:space="preserve">
         <value>detalhes</value>
     </data>
+    <data name="Pastory_HeroTitle" xml:space="preserve">
+        <value>Pastory</value>
+    </data>
+    <data name="Pastory_HeroSubtitle" xml:space="preserve">
+        <value>Sua área de transferência, aprimorada.</value>
+    </data>
+    <data name="Pastory_Desc1" xml:space="preserve">
+        <value>Você já copiou algo importante, apenas para sobrescrevê-lo acidentalmente um segundo depois? O Pastory é o gerenciador de área de transferência leve e nativo para macOS que lembra tudo o que você copia, para que você não precise se preocupar.</value>
+    </data>
+    <data name="Pastory_Desc2" xml:space="preserve">
+        <value>Ficando discretamente na sua barra de menus, o Pastory mantém um histórico seguro e de fácil acesso de seus textos, links e trechos copiados. Ele fica completamente fora do seu caminho até o exato momento em que você precisa.</value>
+    </data>
+    <data name="Pastory_DownloadBtn" xml:space="preserve">
+        <value>Baixar para macOS</value>
+    </data>
+    <data name="Pastory_FeaturesTitle" xml:space="preserve">
+        <value>Principais Recursos</value>
+    </data>
+    <data name="Pastory_Feature1Title" xml:space="preserve">
+        <value>Sempre à Mão</value>
+    </data>
+    <data name="Pastory_Feature1Desc" xml:space="preserve">
+        <value>Fica exclusivamente na barra de menus do macOS. Sem ícones no dock ou janelas pesadas interrompendo seu fluxo de trabalho.</value>
+    </data>
+    <data name="Pastory_Feature2Title" xml:space="preserve">
+        <value>Nativo</value>
+    </data>
+    <data name="Pastory_Feature2Desc" xml:space="preserve">
+        <value>Construído nativamente com Swift e SwiftUI para garantir desempenho fluido e consumo mínimo de bateria.</value>
+    </data>
+    <data name="Pastory_Feature3Title" xml:space="preserve">
+        <value>Privacidade em Primeiro Lugar</value>
+    </data>
+    <data name="Pastory_Feature3Desc" xml:space="preserve">
+        <value>Tudo o que você copia é armazenado localmente no seu Mac. Sem servidores externos, sem rastreamento na nuvem e sem necessidade de contas.</value>
+    </data>
+    <data name="Pastory_ProBadge" xml:space="preserve">
+        <value>Pastory Pro</value>
+    </data>
+    <data name="Pastory_ProTitle" xml:space="preserve">
+        <value>Sem Assinaturas!</value>
+    </data>
+    <data name="Pastory_ProDesc" xml:space="preserve">
+        <value>O Pastory é totalmente gratuito para baixar e usar em seu histórico diário essencial (até 30 itens recentes). Precisa de mais poder? Faça o upgrade para o Pastory Pro com um pagamento único para desbloquear toda a sua produtividade.</value>
+    </data>
+    <data name="Pastory_ProFeature1Title" xml:space="preserve">
+        <value>Histórico Ilimitado</value>
+    </data>
+    <data name="Pastory_ProFeature1Desc" xml:space="preserve">
+        <value>Armazene um fluxo infinito de itens copiados.</value>
+    </data>
+    <data name="Pastory_ProFeature2Title" xml:space="preserve">
+        <value>Pesquisa Avançada</value>
+    </data>
+    <data name="Pastory_ProFeature2Desc" xml:space="preserve">
+        <value>Encontre instantaneamente recortes específicos de dias ou semanas atrás.</value>
+    </data>
+    <data name="Pastory_ProFeature3Title" xml:space="preserve">
+        <value>Limpeza Inteligente</value>
+    </data>
+    <data name="Pastory_ProFeature3Desc" xml:space="preserve">
+        <value>Limpe o histórico antigo de cópias após alguns dias.</value>
+    </data>
+    <data name="Pastory_PrivacyLink" xml:space="preserve">
+        <value>Política de Privacidade</value>
+    </data>
+    <data name="PastoryPrivacy_Title" xml:space="preserve">
+        <value>Política de Privacidade</value>
+    </data>
+    <data name="PastoryPrivacy_LastUpdated" xml:space="preserve">
+        <value>Última atualização: 28 de julho de 2026</value>
+    </data>
+    <data name="PastoryPrivacy_Intro" xml:space="preserve">
+        <value>No Pastory, sua privacidade é nossa maior prioridade. Acreditamos que o que você copia deve permanecer exatamente onde pertence: no seu próprio dispositivo.</value>
+    </data>
+    <data name="PastoryPrivacy_H1" xml:space="preserve">
+        <value>1. Armazenamento Apenas Local</value>
+    </data>
+    <data name="PastoryPrivacy_P1" xml:space="preserve">
+        <value>O Pastory opera de forma totalmente local no seu dispositivo macOS. Tudo o que você copia - textos, links, trechos e imagens - é armazenado diretamente no armazenamento local do seu computador. Não usamos servidores externos, bancos de dados em nuvem ou qualquer solução de armazenamento de terceiros para guardar o histórico da sua área de transferência.</value>
+    </data>
+    <data name="PastoryPrivacy_H2" xml:space="preserve">
+        <value>2. Sem Rastreamento na Nuvem ou Analytics</value>
+    </data>
+    <data name="PastoryPrivacy_P2" xml:space="preserve">
+        <value>Não rastreamos, coletamos ou analisamos o conteúdo da sua área de transferência. Não há rastreadores de analytics embutidos no Pastory que monitorem seu uso ou enviem dados de volta para nós ou terceiros.</value>
+    </data>
+    <data name="PastoryPrivacy_H3" xml:space="preserve">
+        <value>3. Sem Necessidade de Contas</value>
+    </data>
+    <data name="PastoryPrivacy_P3" xml:space="preserve">
+        <value>O Pastory não requer que você crie uma conta, faça login ou forneça qualquer informação pessoal para usar o aplicativo. Ele foi projetado para ser completamente anônimo e independente.</value>
+    </data>
+    <data name="PastoryPrivacy_H4" xml:space="preserve">
+        <value>4. Permissões do macOS</value>
+    </data>
+    <data name="PastoryPrivacy_P4" xml:space="preserve">
+        <value>Para funcionar corretamente como um gerenciador de área de transferência, o Pastory requer permissões específicas do macOS para ler a área de transferência do sistema. Essa permissão é usada exclusivamente para a funcionalidade principal do aplicativo e nunca para coleta de dados.</value>
+    </data>
+    <data name="PastoryPrivacy_H5" xml:space="preserve">
+        <value>5. Seus Dados, Seu Controle</value>
+    </data>
+    <data name="PastoryPrivacy_P5" xml:space="preserve">
+        <value>Você tem total controle sobre seus dados. Você pode limpar todo o seu histórico da área de transferência a qualquer momento diretamente nas preferências do aplicativo. Para usuários do Pastory Pro, o recurso de Limpeza Inteligente remove automaticamente itens antigos com base nas suas preferências, garantindo que seu armazenamento permaneça limpo e seguro.</value>
+    </data>
+    <data name="PastoryPrivacy_H6" xml:space="preserve">
+        <value>6. Alterações a Esta Política de Privacidade</value>
+    </data>
+    <data name="PastoryPrivacy_P6" xml:space="preserve">
+        <value>Se decidirmos mudar nossa política de privacidade, publicaremos as alterações nesta página. No entanto, nosso compromisso central de manter seus dados locais e seguros nunca mudará.</value>
+    </data>
+    <data name="PastoryPrivacy_Contact" xml:space="preserve">
+        <value>Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco.</value>
+    </data>
+    <data name="Pastory_BackBtn" xml:space="preserve">
+        <value>Voltar para o Pastory</value>
+    </data>
+    <data name="PastoryLayout_BackHome" xml:space="preserve">
+        <value>Voltar ao Início</value>
+    </data>
+    <data name="Pastory_AppName" xml:space="preserve">
+        <value>Pastory</value>
+    </data>
+    <data name="Pastory_BadgeFree" xml:space="preserve">
+        <value>Gratuito</value>
+    </data>
+    <data name="Pastory_ItemCount" xml:space="preserve">
+        <value>30/30 itens</value>
+    </data>
+    <data name="Pastory_SearchPlaceholder" xml:space="preserve">
+        <value>Pesquisar por palavras-chave (Exclusivo Pro)</value>
+    </data>
+    <data name="Pastory_AlertTitle" xml:space="preserve">
+        <value>Limite de 30 itens alcançado</value>
+    </data>
+    <data name="Pastory_AlertDesc" xml:space="preserve">
+        <value>Seu app segue funcionando! Novas cópias substituem os registros mais antigos.</value>
+    </data>
+    <data name="Pastory_AlertLink" xml:space="preserve">
+        <value>Desbloqueie o histórico ilimitado com o Premium</value>
+    </data>
+    <data name="Pastory_Time26s" xml:space="preserve">
+        <value>há 26 seg.</value>
+    </data>
+    <data name="Pastory_Time30s" xml:space="preserve">
+        <value>há 30 seg.</value>
+    </data>
+    <data name="Pastory_FreePlanTitle" xml:space="preserve">
+        <value>NO PASTORY FREE</value>
+    </data>
+    <data name="Pastory_FreeFeature1" xml:space="preserve">
+        <value>Até 30 itens recentes</value>
+    </data>
+    <data name="Pastory_FreeFeature2" xml:space="preserve">
+        <value>Atalho global rápido</value>
+    </data>
+    <data name="Pastory_FreeFeature3" xml:space="preserve">
+        <value>Cole com atalhos ⌘1 a 5</value>
+    </data>
+    <data name="Pastory_FreeFeature4" xml:space="preserve">
+        <value>Colar no aplicativo ativo</value>
+    </data>
+    <data name="Pastory_ProPlanTitle" xml:space="preserve">
+        <value>EXCLUSIVO NO PASTORY PRO</value>
+    </data>
+    <data name="Pastory_PaymentInfo1" xml:space="preserve">
+        <value>Pagamento Único. Sem</value>
+    </data>
+    <data name="Pastory_PaymentInfo2" xml:space="preserve">
+        <value>assinaturas.</value>
+    </data>
+    <data name="Pastory_RestorePurchases" xml:space="preserve">
+        <value>Restaurar Compras</value>
+    </data>
+    <data name="Pastory_BuyPro" xml:space="preserve">
+        <value>Comprar PRO</value>
+    </data>
 </root>
