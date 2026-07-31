@@ -14,4 +14,27 @@
     <main class="pastory-main-content">
         @Body
     </main>
+
+    <footer class="bottom-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>© @YearDetails() Raphael Frei. All rights reserved.</p>
+                <p class="built-with">Built with <span class="accent">.NET Blazor</span>.</p>
+            </div>
+
+            <div class="footer-actions">
+                <div class="language-wrapper">
+                    <CultureSelector/>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
+
+@code{
+    private string YearDetails () {
+        int startYear = 2021;
+        int currentYear = DateTime.Now.Year;
+        return currentYear == startYear ? currentYear.ToString() : $"{startYear} - {currentYear}";
+    }
+}
