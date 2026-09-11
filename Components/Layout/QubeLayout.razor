@@ -1,0 +1,53 @@
+@inherits LayoutComponentBase
+@inject Microsoft.Extensions.Localization.IStringLocalizer<RaphaelFreiWeb.Resources.Resources> Loc
+
+<div class="qube-page-wrapper">
+    <header class="qube-header">
+        <div class="qube-header-inner">
+            <a href="/" class="qube-back-badge">
+                <span class="back-arrow">←</span>
+                <span class="back-text">@Loc["Qube_BackHome"]</span>
+            </a>
+
+            <div class="qube-brand">
+                <a href="/Qube" class="qube-logo-link">
+                    <img src="/images/qube-icon.png" alt="Qube Icon" class="qube-nav-icon" />
+                    <span class="qube-brand-text">QUBE</span>
+                </a>
+            </div>
+
+            <nav class="qube-nav">
+                <a href="/Qube/Privacy" class="qube-nav-btn">
+                    @Loc["Qube_Privacy_Nav"]
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="qube-main">
+        @Body
+    </main>
+
+    <footer class="bottom-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>© @YearDetails() Raphael Frei. All rights reserved.</p>
+                <p class="built-with">Built with <span class="accent">.NET Blazor</span>.</p>
+            </div>
+
+            <div class="footer-actions">
+                <div class="language-wrapper">
+                    <CultureSelector/>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+@code {
+    private string YearDetails() {
+        int startYear = 2021;
+        int currentYear = DateTime.Now.Year;
+        return currentYear == startYear ? currentYear.ToString() : $"{startYear} - {currentYear}";
+    }
+}

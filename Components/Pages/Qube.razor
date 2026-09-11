@@ -1,0 +1,217 @@
+@page "/Qube"
+@layout RaphaelFreiWeb.Components.Layout.QubeLayout
+@inject IConfiguration Configuration
+@inject Microsoft.Extensions.Localization.IStringLocalizer<RaphaelFreiWeb.Resources.Resources> Loc
+
+<PageTitle>@Loc["Qube_Title"]</PageTitle>
+
+<div class="qube-container">
+    <!-- HERO SECTION -->
+    <section class="qube-hero">
+        <div class="hero-left">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                @Loc["Qube_Hero_Badge"]
+            </div>
+            
+            <h1 class="hero-title">
+                @Loc["Qube_Hero_Heading"]
+            </h1>
+
+            <p class="hero-desc">
+                @Loc["Qube_Hero_Subtitle"]
+            </p>
+
+            <div class="platforms-bar">
+                <span class="platform-chip"><i class="bi bi-apple"></i> iOS & iPadOS</span>
+                <span class="platform-chip"><i class="bi bi-laptop"></i> macOS</span>
+                <span class="platform-chip"><i class="bi bi-windows"></i> Windows</span>
+                <span class="platform-chip"><i class="bi bi-android2"></i> Android</span>
+            </div>
+
+            <div class="hero-cta-group">
+                <a href="@(Configuration["AppLinks:QubeAppStore"] ?? "#")" class="btn-neo btn-appstore" target="_blank">
+                    <i class="bi bi-apple"></i>
+                    <span>@Loc["Qube_Download_AppStore"]</span>
+                </a>
+
+                <a href="@(Configuration["AppLinks:QubeGooglePlay"] ?? "#")" class="btn-neo btn-googleplay" target="_blank">
+                    <i class="bi bi-google-play"></i>
+                    <span>@Loc["Qube_Download_GooglePlay"]</span>
+                </a>
+
+                <a href="@(Configuration["AppLinks:QubeWindows"] ?? "#")" class="btn-neo btn-windows" target="_blank">
+                    <i class="bi bi-windows"></i>
+                    <span>@Loc["Qube_Download_Windows"]</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <!-- 3D CUBE SHOWCASE -->
+            <div class="cube-stage-card">
+                <div class="cube-stage-header">
+                    <div class="stage-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="stage-title">@Loc["Qube_Simulator_Title"]</div>
+                    <div class="mode-toggles">
+                        <button type="button" class="mode-btn active" id="btn-mode-3x3" onclick="setCubeMode('3x3')">3x3</button>
+                        <button type="button" class="mode-btn" id="btn-mode-2x2" onclick="setCubeMode('2x2')">2x2</button>
+                    </div>
+                </div>
+
+                <div class="cube-viewport">
+                    <div class="cube-3d-scene" id="cube-scene">
+                        <div class="rubik-cube" id="rubik-cube">
+                            <!-- TOP FACE (YELLOW) -->
+                            <div class="cube-face face-top" id="face-top">
+                                @for (int i = 0; i < 9; i++) {
+                                    <div class="sticker" style="background-color: #F5CB5C;"></div>
+                                }
+                            </div>
+                            <!-- FRONT/LEFT FACE (CYAN) -->
+                            <div class="cube-face face-left" id="face-left">
+                                @for (int i = 0; i < 9; i++) {
+                                    <div class="sticker" style="background-color: #7BDFF2;"></div>
+                                }
+                            </div>
+                            <!-- RIGHT FACE (PINK) -->
+                            <div class="cube-face face-right" id="face-right">
+                                @for (int i = 0; i < 9; i++) {
+                                    <div class="sticker" style="background-color: #EF476F;"></div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cube-controls">
+                    <button type="button" class="ctrl-btn btn-scramble" onclick="scrambleCube()">
+                        <i class="bi bi-shuffle"></i> @Loc["Qube_Interactive_Scramble"]
+                    </button>
+                    <button type="button" class="ctrl-btn btn-solve" onclick="solveCube()">
+                        <i class="bi bi-magic"></i> @Loc["Qube_Interactive_Solve"]
+                    </button>
+                    <button type="button" class="ctrl-btn btn-reset" onclick="resetCube()">
+                        <i class="bi bi-arrow-counterclockwise"></i> @Loc["Qube_Interactive_Reset"]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT FEATURES GRID -->
+    <section class="features-section">
+        <div class="section-badge-center">
+            <span>@Loc["Qube_Section_CoreFeatures"]</span>
+        </div>
+        <h2 class="section-title">@Loc["Qube_Section_Title"]</h2>
+
+        <div class="features-grid">
+            <!-- Feature 1: 2x2 & 3x3 -->
+            <div class="neo-card card-yellow">
+                <div class="card-icon-box">
+                    <span class="cube-mini-art">2x2</span>
+                </div>
+                <h3 class="card-title">@Loc["Qube_Feature1_Title"]</h3>
+                <p class="card-text">@Loc["Qube_Feature1_Desc"]</p>
+                <div class="card-tag">@Loc["Qube_Feature1_Tag"]</div>
+            </div>
+
+            <!-- Feature 2: Swipe Controls -->
+            <div class="neo-card card-cyan">
+                <div class="card-icon-box">
+                    <i class="bi bi-hand-index-thumb"></i>
+                </div>
+                <h3 class="card-title">@Loc["Qube_Feature2_Title"]</h3>
+                <p class="card-text">@Loc["Qube_Feature2_Desc"]</p>
+                <div class="card-tag">@Loc["Qube_Feature2_Tag"]</div>
+            </div>
+
+            <!-- Feature 3: Solver -->
+            <div class="neo-card card-pink">
+                <div class="card-icon-box">
+                    <i class="bi bi-camera-fill"></i>
+                </div>
+                <h3 class="card-title">@Loc["Qube_Feature3_Title"]</h3>
+                <p class="card-text">@Loc["Qube_Feature3_Desc"]</p>
+                <div class="card-tag">@Loc["Qube_Feature3_Tag"]</div>
+            </div>
+
+            <!-- Feature 4: Auto-solve & Scramble -->
+            <div class="neo-card card-dark">
+                <div class="card-icon-box">
+                    <i class="bi bi-cpu"></i>
+                </div>
+                <h3 class="card-title">@Loc["Qube_Feature4_Title"]</h3>
+                <p class="card-text">@Loc["Qube_Feature4_Desc"]</p>
+                <div class="card-tag">@Loc["Qube_Feature4_Tag"]</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW THE SOLVER WORKS SECTION -->
+    <section class="solver-flow-section">
+        <div class="solver-banner">
+            <div class="solver-text-col">
+                <span class="banner-pill">@Loc["Qube_Solver_Pill"]</span>
+                <h2 class="banner-heading">@Loc["Qube_Solver_Heading"]</h2>
+                <p class="banner-sub">
+                    @Loc["Qube_Solver_Sub"]
+                </p>
+                <div class="steps-row">
+                    <div class="step-item">
+                        <span class="step-num">1</span>
+                        <div>
+                            <strong>@Loc["Qube_Solver_Step1_Title"]</strong>
+                            <p>@Loc["Qube_Solver_Step1_Desc"]</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-num">2</span>
+                        <div>
+                            <strong>@Loc["Qube_Solver_Step2_Title"]</strong>
+                            <p>@Loc["Qube_Solver_Step2_Desc"]</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-num">3</span>
+                        <div>
+                            <strong>@Loc["Qube_Solver_Step3_Title"]</strong>
+                            <p>@Loc["Qube_Solver_Step3_Desc"]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD CALL TO ACTION -->
+    <section class="qube-bottom-cta">
+        <div class="cta-inner-card">
+            <img src="/images/qube-icon.png" alt="Qube App Icon" class="cta-icon-large" />
+            <h2 class="cta-heading">@Loc["Qube_CTA_Heading"]</h2>
+            <p class="cta-sub">@Loc["Qube_CTA_Sub"]</p>
+            
+            <div class="hero-cta-group cta-center">
+                <a href="@(Configuration["AppLinks:QubeAppStore"] ?? "#")" class="btn-neo btn-appstore" target="_blank">
+                    <i class="bi bi-apple"></i>
+                    <span>@Loc["Qube_Download_AppStore"]</span>
+                </a>
+                <a href="@(Configuration["AppLinks:QubeGooglePlay"] ?? "#")" class="btn-neo btn-googleplay" target="_blank">
+                    <i class="bi bi-google-play"></i>
+                    <span>@Loc["Qube_Download_GooglePlay"]</span>
+                </a>
+                <a href="@(Configuration["AppLinks:QubeWindows"] ?? "#")" class="btn-neo btn-windows" target="_blank">
+                    <i class="bi bi-windows"></i>
+                    <span>@Loc["Qube_Download_Windows"]</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="./Components/Pages/Qube.razor.js"></script>

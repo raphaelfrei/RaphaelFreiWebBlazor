@@ -72,6 +72,17 @@ namespace RaphaelFreiWeb.Data
                         Order = 4,
                         ReleaseDate = null,
                         Tags = new List<string> { "SwiftUI" }
+                    },
+                    new AppModel {
+                        Name = "Qube - 3D Cube Solver & Game",
+                        Slug = "qube",
+                        Description = "Twist, Scramble & Solve 2x2 and 3x3 cubes with intuitive swipe gestures and real-life cube solver algorithms.",
+                        IconUrl = "/images/qube-icon.png",
+                        WebsiteUrl = "https://raphaelfrei.com.br/Qube",
+                        IsFeatured = true,
+                        Order = 5,
+                        ReleaseDate = null,
+                        Tags = new List<string> { "C#", "MonoGame" }
                     }
                 };
                 context.Apps.AddRange(apps);

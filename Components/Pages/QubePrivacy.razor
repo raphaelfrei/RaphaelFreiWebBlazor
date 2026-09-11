@@ -1,0 +1,52 @@
+@page "/Qube/Privacy"
+@layout RaphaelFreiWeb.Components.Layout.QubeLayout
+@inject Microsoft.Extensions.Localization.IStringLocalizer<RaphaelFreiWeb.Resources.Resources> Loc
+
+<PageTitle>@Loc["Qube_Privacy_Title"]</PageTitle>
+
+<div class="qube-privacy-container">
+    <div class="privacy-header">
+        <a href="/Qube" class="privacy-back-btn">
+            ← @Loc["Qube_BackToGame"]
+        </a>
+        <div class="privacy-badge">@Loc["Qube_Privacy_Nav"]</div>
+        <h1 class="privacy-title">@Loc["Qube_Privacy_Title"]</h1>
+        <p class="privacy-subtitle">@Loc["Qube_Privacy_Subtitle"]</p>
+    </div>
+
+    <div class="privacy-card">
+        <div class="privacy-section">
+            <div class="section-icon-badge yellow">
+                <i class="bi bi-shield-lock-fill"></i>
+            </div>
+            <div class="section-body">
+                <h2>@Loc["Qube_Privacy_Section1_Title"]</h2>
+                <p>@Loc["Qube_Privacy_Section1_Desc"]</p>
+            </div>
+        </div>
+
+        <div class="privacy-divider"></div>
+
+        <div class="privacy-section">
+            <div class="section-icon-badge cyan">
+                <i class="bi bi-wifi-off"></i>
+            </div>
+            <div class="section-body">
+                <h2>@Loc["Qube_Privacy_Section2_Title"]</h2>
+                <p>@Loc["Qube_Privacy_Section2_Desc"]</p>
+            </div>
+        </div>
+
+        <div class="privacy-divider"></div>
+
+        <div class="privacy-section">
+            <div class="section-icon-badge pink">
+                <i class="bi bi-envelope-heart-fill"></i>
+            </div>
+            <div class="section-body">
+                <h2>@Loc["Qube_Privacy_Section3_Title"]</h2>
+                <p>@Loc["Qube_Privacy_Section3_Desc"]</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -291,4 +291,148 @@
     <data name="Pastory_BuyPro" xml:space="preserve">
         <value>Comprar PRO</value>
     </data>
+    <data name="Qube_Title" xml:space="preserve">
+        <value>Qube - Jogo e Solucionador de Cubo Mágico 3D</value>
+    </data>
+    <data name="Qube_Hero_Badge" xml:space="preserve">
+        <value>QUBE STUDIO 3D</value>
+    </data>
+    <data name="Qube_Hero_Heading" xml:space="preserve">
+        <value>Gire, Embaralhe e Resolva em 3D</value>
+    </data>
+    <data name="Qube_Hero_Subtitle" xml:space="preserve">
+        <value>Jogue com cubos 2x2 e 3x3, monte manualmente com gestos suaves ou insira as cores do seu cubo real e deixe o Qube encontrar a solução ideal.</value>
+    </data>
+    <data name="Qube_Download_AppStore" xml:space="preserve">
+        <value>App Store</value>
+    </data>
+    <data name="Qube_Download_GooglePlay" xml:space="preserve">
+        <value>Google Play</value>
+    </data>
+    <data name="Qube_Download_Windows" xml:space="preserve">
+        <value>Windows</value>
+    </data>
+    <data name="Qube_Platforms_Support" xml:space="preserve">
+        <value>Disponível para iPhone, iPad, Mac, Windows e Android</value>
+    </data>
+    <data name="Qube_Feature1_Title" xml:space="preserve">
+        <value>Cubos 2x2 e 3x3</value>
+    </data>
+    <data name="Qube_Feature1_Desc" xml:space="preserve">
+        <value>Alterne facilmente entre o Pocket Cube (2x2) e o clássico Cubo Mágico (3x3) com física 3D ágil.</value>
+    </data>
+    <data name="Qube_Feature1_Tag" xml:space="preserve">
+        <value>Pocket &amp; Clássico</value>
+    </data>
+    <data name="Qube_Feature2_Title" xml:space="preserve">
+        <value>Controles por Gestos Fluidos</value>
+    </data>
+    <data name="Qube_Feature2_Desc" xml:space="preserve">
+        <value>Deslize e rotacione as camadas sem esforço usando seu dedo, mouse ou trackpad.</value>
+    </data>
+    <data name="Qube_Feature2_Tag" xml:space="preserve">
+        <value>Gestos &amp; Física</value>
+    </data>
+    <data name="Qube_Feature3_Title" xml:space="preserve">
+        <value>Solucionador de Cubo Real</value>
+    </data>
+    <data name="Qube_Feature3_Desc" xml:space="preserve">
+        <value>Tem um cubo embaralhado na sua mesa? Digite as cores das faces no Qube e veja ele calcular o passo a passo para montar.</value>
+    </data>
+    <data name="Qube_Feature3_Tag" xml:space="preserve">
+        <value>Algoritmo Otimizado</value>
+    </data>
+    <data name="Qube_Feature4_Title" xml:space="preserve">
+        <value>Embaralhe e Resolva no Automático</value>
+    </data>
+    <data name="Qube_Feature4_Desc" xml:space="preserve">
+        <value>Embaralhe instantaneamente com um toque ou veja o solucionador montar passo a passo para aprender as fórmulas.</value>
+    </data>
+    <data name="Qube_Feature4_Tag" xml:space="preserve">
+        <value>Passo a Passo</value>
+    </data>
+    <data name="Qube_Simulator_Title" xml:space="preserve">
+        <value>Simulador 3D Qube</value>
+    </data>
+    <data name="Qube_Section_CoreFeatures" xml:space="preserve">
+        <value>RECURSOS PRINCIPAIS</value>
+    </data>
+    <data name="Qube_Section_Title" xml:space="preserve">
+        <value>Construído para Aprender, Resolver e Desafiar</value>
+    </data>
+    <data name="Qube_Solver_Pill" xml:space="preserve">
+        <value>ASSISTENTE SOLUCIONADOR</value>
+    </data>
+    <data name="Qube_Solver_Heading" xml:space="preserve">
+        <value>Tem um Cubo Físico Travado? O Qube Resolve para Você.</value>
+    </data>
+    <data name="Qube_Solver_Sub" xml:space="preserve">
+        <value>Você não precisa ser um mestre dos algoritmos para voltar a ver todas as faces alinhadas. Basta preencher as peças de cada lado no app e acompanhar a solução em 3D.</value>
+    </data>
+    <data name="Qube_Solver_Step1_Title" xml:space="preserve">
+        <value>Pinte as Faces</value>
+    </data>
+    <data name="Qube_Solver_Step1_Desc" xml:space="preserve">
+        <value>Indique como está cada adesivo no seu cubo real.</value>
+    </data>
+    <data name="Qube_Solver_Step2_Title" xml:space="preserve">
+        <value>Cálculo Otimizado</value>
+    </data>
+    <data name="Qube_Solver_Step2_Desc" xml:space="preserve">
+        <value>O algoritmo encontra a menor sequência de giros.</value>
+    </data>
+    <data name="Qube_Solver_Step3_Title" xml:space="preserve">
+        <value>Siga o Passo a Passo</value>
+    </data>
+    <data name="Qube_Solver_Step3_Desc" xml:space="preserve">
+        <value>Gire as camadas na vida real conforme o app demonstra.</value>
+    </data>
+    <data name="Qube_CTA_Heading" xml:space="preserve">
+        <value>Pronto para Desvendar o Cubo?</value>
+    </data>
+    <data name="Qube_CTA_Sub" xml:space="preserve">
+        <value>Disponível para todas as suas telas favoritas: celular, tablet e computador.</value>
+    </data>
+    <data name="Qube_Interactive_Scramble" xml:space="preserve">
+        <value>Embaralhar</value>
+    </data>
+    <data name="Qube_Interactive_Solve" xml:space="preserve">
+        <value>Resolver</value>
+    </data>
+    <data name="Qube_Interactive_Reset" xml:space="preserve">
+        <value>Reiniciar</value>
+    </data>
+    <data name="Qube_Privacy_Nav" xml:space="preserve">
+        <value>Política de Privacidade</value>
+    </data>
+    <data name="Qube_BackToGame" xml:space="preserve">
+        <value>Voltar ao Qube</value>
+    </data>
+    <data name="Qube_BackHome" xml:space="preserve">
+        <value>Voltar ao Início</value>
+    </data>
+    <data name="Qube_Privacy_Title" xml:space="preserve">
+        <value>Política de Privacidade do Qube</value>
+    </data>
+    <data name="Qube_Privacy_Subtitle" xml:space="preserve">
+        <value>Simples, transparente e totalmente offline. Seus dados permanecem apenas com você.</value>
+    </data>
+    <data name="Qube_Privacy_Section1_Title" xml:space="preserve">
+        <value>Zero Coleta de Dados</value>
+    </data>
+    <data name="Qube_Privacy_Section1_Desc" xml:space="preserve">
+        <value>O Qube não coleta, não armazena, não rastreia e não compartilha nenhuma informação pessoal ou do dispositivo. Tudo fica gravado localmente no seu aparelho.</value>
+    </data>
+    <data name="Qube_Privacy_Section2_Title" xml:space="preserve">
+        <value>Offline e Independente</value>
+    </data>
+    <data name="Qube_Privacy_Section2_Desc" xml:space="preserve">
+        <value>O jogo funciona 100% offline sem exigir login, cadastro ou conexão com a internet.</value>
+    </data>
+    <data name="Qube_Privacy_Section3_Title" xml:space="preserve">
+        <value>Contato e Suporte</value>
+    </data>
+    <data name="Qube_Privacy_Section3_Desc" xml:space="preserve">
+        <value>Caso tenha dúvidas, sugestões ou precise de suporte sobre o Qube, envie uma mensagem para contact@raphaelfrei.com.br.</value>
+    </data>
 </root>
