@@ -1,0 +1,119 @@
+{
+  "experiences": [
+    {
+      "company": "Adient PLC",
+      "startDate": "2021-02-22T00:00:00Z",
+      "endDate": null,
+      "positions": [
+        {
+          "role": "IT Technical Support Analyst",
+          "startDate": "2023-02-06T00:00:00Z",
+          "endDate": null,
+          "description": "Experienced in supporting and developing desktop applications and databases using Progress 4GL and C# (.NET) for shop floor applications and PLC integration.",
+          "softwareStack": [
+            "Progress 4GL",
+            ".NET Blazor",
+            ".NET WPF"
+          ],
+          "databaseStack": [
+            "OpenEdge Progress",
+            "Microsoft SQL Server",
+            "EF Core"
+          ]
+        },
+        {
+          "role": "IT Intern",
+          "startDate": "2021-02-22T00:00:00Z",
+          "endDate": "2023-02-06T00:00:00Z",
+          "description": "Assisted in the development of desktop applications using OpenEdge Progress.",
+          "softwareStack": [
+            ".NET WinForms"
+          ],
+          "databaseStack": [
+            "Progress 4GL"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidade de São Paulo (USP/MBA Esalq)",
+      "degree": "MBA at Software Engineering",
+      "startDate": "2024-06-01T00:00:00Z",
+      "endDate": "2025-12-01T00:00:00Z"
+    },
+    {
+      "institution": "Universidade Municipal de São Caetano do Sul (USCS)",
+      "degree": "Bachelor at Computer Science",
+      "startDate": "2020-01-01T00:00:00Z",
+      "endDate": "2023-12-01T00:00:00Z"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Progress OpenEdge Full Integration for PASOE",
+      "issuer": "DLC Soluções em Tecnologia Ltda",
+      "issueDate": "2025-06-01T00:00:00Z",
+      "expirationDate": null,
+      "credentialId": null,
+      "credentialUrl": null
+    },
+    {
+      "name": "Implementing Progress OpenEdge Replication for Disaster Recovery",
+      "issuer": "DLC Soluções em Tecnologia Ltda",
+      "issueDate": "2025-06-01T00:00:00Z",
+      "expirationDate": null,
+      "credentialId": null,
+      "credentialUrl": null
+    },
+    {
+      "name": "Progress OpenEdge Advanced Database Administration",
+      "issuer": "DLC Soluções em Tecnologia Ltda",
+      "issueDate": "2024-04-01T00:00:00Z",
+      "expirationDate": null,
+      "credentialId": null,
+      "credentialUrl": null
+    },
+    {
+      "name": "Problem Solving and Decision Making Practitioner",
+      "issuer": "Kepner-Tregoe",
+      "issueDate": "2024-02-01T00:00:00Z",
+      "expirationDate": null,
+      "credentialId": "PA24044AMER1889KT",
+      "credentialUrl": null
+    },
+    {
+      "name": "ITIL® Foundation Certificate in IT Service Management",
+      "issuer": "PeopleCert",
+      "issueDate": "2024-01-01T00:00:00Z",
+      "expirationDate": "2027-01-01T00:00:00Z",
+      "credentialId": "GR671604448RF",
+      "credentialUrl": null
+    },
+    {
+      "name": "Microsoft Certified: Azure Data Fundamentals (DP-900)",
+      "issuer": "Microsoft / SENAI",
+      "issueDate": "2023-01-01T00:00:00Z",
+      "expirationDate": null,
+      "credentialId": null,
+      "credentialUrl": null
+    },
+    {
+      "name": "AWS Academy Graduate - Cloud Foundations",
+      "issuer": "Amazon Web Services (AWS)",
+      "issueDate": "2022-10-01T00:00:00Z",
+      "expirationDate": null,
+      "credentialId": "ccf6b785-3c01-491f-bdf9-135a583ffcc8",
+      "credentialUrl": "https://www.credly.com/badges/ccf6b785-3c01-491f-bdf9-135a583ffcc8"
+    },
+    {
+      "name": "CCNA: Introduction to Networks",
+      "issuer": "Cisco",
+      "issueDate": "2022-06-01T00:00:00Z",
+      "expirationDate": null,
+      "credentialId": "3d5c43d6-fcfd-4ed6-aaa4-e523962b2087",
+      "credentialUrl": "https://www.credly.com/badges/3d5c43d6-fcfd-4ed6-aaa4-e523962b2087"
+    }
+  ]
+}

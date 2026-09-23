@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qube</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/qube.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="qube-body">
+    <div class="qube-page-wrapper">
+        <header class="qube-header">
+            <div class="qube-header-inner">
+                <a href="/" class="qube-back-badge">
+                    <span class="back-arrow">←</span>
+                    <span class="back-text" data-i18n="Qube_BackHome">Back to Portfolio</span>
+                </a>
+
+                <div class="qube-brand">
+                    <a href="/qube" class="qube-logo-link">
+                        <img src="/images/qube-icon.png" alt="Qube Icon" class="qube-nav-icon" />
+                        <span class="qube-brand-text">QUBE</span>
+                    </a>
+                </div>
+
+                <nav class="qube-nav">
+                    <a href="/qube/privacy" class="qube-nav-btn" data-i18n="Qube_Privacy_Nav">
+                        Privacy Policy
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="qube-main">
+
+
+<div class="qube-container">
+    <!-- HERO SECTION -->
+    <section class="qube-hero">
+        <div class="hero-left">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span data-i18n="Qube_Hero_Badge">QUBE STUDIO 3D</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span data-i18n="Qube_Hero_Heading">Twist, Scramble &amp; Solve in 3D</span>
+            </h1>
+
+            <p class="hero-desc">
+                <span data-i18n="Qube_Hero_Subtitle">Play 2x2 &amp; 3x3 cubes, solve manually with smooth gestures, or enter your real-life cube colors and let Qube find the optimal solution.</span>
+            </p>
+
+            <div class="platforms-bar">
+                <span class="platform-chip"><i class="bi bi-apple"></i> iOS & iPadOS</span>
+                <span class="platform-chip"><i class="bi bi-laptop"></i> macOS</span>
+                <span class="platform-chip"><i class="bi bi-windows"></i> Windows</span>
+                <span class="platform-chip"><i class="bi bi-android2"></i> Android</span>
+            </div>
+
+            <div class="hero-cta-group">
+                <a href="https://apps.apple.com/br/app/qube-studio-3d-cubo-m%C3%A1gico/id6808970842" class="btn-neo btn-appstore" target="_blank">
+                    <i class="bi bi-apple"></i>
+                    <span><span data-i18n="Qube_Download_AppStore">App Store</span></span>
+                </a>
+
+                <a href="#" class="btn-neo btn-googleplay" target="_blank">
+                    <i class="bi bi-google-play"></i>
+                    <span><span data-i18n="Qube_Download_GooglePlay">Google Play</span></span>
+                </a>
+
+                <a href="#" class="btn-neo btn-windows" target="_blank">
+                    <i class="bi bi-windows"></i>
+                    <span><span data-i18n="Qube_Download_Windows">Windows</span></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <!-- 3D CUBE SHOWCASE -->
+            <div class="cube-stage-card">
+                <div class="cube-stage-header">
+                    <div class="stage-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="stage-title"><span data-i18n="Qube_Simulator_Title">Qube 3D Simulator</span></div>
+                    <div class="mode-toggles">
+                        <button type="button" class="mode-btn active" id="btn-mode-3x3" onclick="setCubeMode('3x3')">3x3</button>
+                        <button type="button" class="mode-btn" id="btn-mode-2x2" onclick="setCubeMode('2x2')">2x2</button>
+                    </div>
+                </div>
+
+                <div class="cube-viewport">
+                    <div class="cube-3d-scene" id="cube-scene">
+                        <div class="rubik-cube" id="rubik-cube">
+                            <!-- TOP FACE (YELLOW) -->
+                            <div class="cube-face face-top" id="face-top">
+                                
+                                    <div class="sticker" style="background-color: #F5CB5C;"></div>
+                                
+                                    <div class="sticker" style="background-color: #F5CB5C;"></div>
+                                
+                                    <div class="sticker" style="background-color: #F5CB5C;"></div>
+                                
+                                    <div class="sticker" style="background-color: #F5CB5C;"></div>
+                                
+                                    <div class="sticker" style="background-color: #F5CB5C;"></div>
+                                
+                                    <div class="sticker" style="background-color: #F5CB5C;"></div>
+                                
+                                    <div class="sticker" style="background-color: #F5CB5C;"></div>
+                                
+                                    <div class="sticker" style="background-color: #F5CB5C;"></div>
+                                
+                                    <div class="sticker" style="background-color: #F5CB5C;"></div>
+                                
+                            </div>
+                            <!-- FRONT/LEFT FACE (CYAN) -->
+                            <div class="cube-face face-left" id="face-left">
+                                
+                                    <div class="sticker" style="background-color: #7BDFF2;"></div>
+                                
+                                    <div class="sticker" style="background-color: #7BDFF2;"></div>
+                                
+                                    <div class="sticker" style="background-color: #7BDFF2;"></div>
+                                
+                                    <div class="sticker" style="background-color: #7BDFF2;"></div>
+                                
+                                    <div class="sticker" style="background-color: #7BDFF2;"></div>
+                                
+                                    <div class="sticker" style="background-color: #7BDFF2;"></div>
+                                
+                                    <div class="sticker" style="background-color: #7BDFF2;"></div>
+                                
+                                    <div class="sticker" style="background-color: #7BDFF2;"></div>
+                                
+                                    <div class="sticker" style="background-color: #7BDFF2;"></div>
+                                
+                            </div>
+                            <!-- RIGHT FACE (PINK) -->
+                            <div class="cube-face face-right" id="face-right">
+                                
+                                    <div class="sticker" style="background-color: #EF476F;"></div>
+                                
+                                    <div class="sticker" style="background-color: #EF476F;"></div>
+                                
+                                    <div class="sticker" style="background-color: #EF476F;"></div>
+                                
+                                    <div class="sticker" style="background-color: #EF476F;"></div>
+                                
+                                    <div class="sticker" style="background-color: #EF476F;"></div>
+                                
+                                    <div class="sticker" style="background-color: #EF476F;"></div>
+                                
+                                    <div class="sticker" style="background-color: #EF476F;"></div>
+                                
+                                    <div class="sticker" style="background-color: #EF476F;"></div>
+                                
+                                    <div class="sticker" style="background-color: #EF476F;"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cube-controls">
+                    <button type="button" class="ctrl-btn btn-scramble" onclick="scrambleCube()">
+                        <i class="bi bi-shuffle"></i> <span data-i18n="Qube_Interactive_Scramble">Scramble</span>
+                    </button>
+                    <button type="button" class="ctrl-btn btn-solve" onclick="solveCube()">
+                        <i class="bi bi-magic"></i> <span data-i18n="Qube_Interactive_Solve">Solve</span>
+                    </button>
+                    <button type="button" class="ctrl-btn btn-reset" onclick="resetCube()">
+                        <i class="bi bi-arrow-counterclockwise"></i> <span data-i18n="Qube_Interactive_Reset">Reset</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT FEATURES GRID -->
+    <section class="features-section">
+        <div class="section-badge-center">
+            <span><span data-i18n="Qube_Section_CoreFeatures">CORE FEATURES</span></span>
+        </div>
+        <h2 class="section-title"><span data-i18n="Qube_Section_Title">Built to Learn, Solve, and Challenge</span></h2>
+
+        <div class="features-grid">
+            <!-- Feature 1: 2x2 & 3x3 -->
+            <div class="neo-card card-yellow">
+                <div class="card-icon-box">
+                    <span class="cube-mini-art">2x2</span>
+                </div>
+                <h3 class="card-title"><span data-i18n="Qube_Feature1_Title">2x2 &amp; 3x3 Cubes</span></h3>
+                <p class="card-text"><span data-i18n="Qube_Feature1_Desc">Switch easily between the Pocket Cube (2x2) and classic Rubik's Cube (3x3) with snappy 3D physics.</span></p>
+                <div class="card-tag"><span data-i18n="Qube_Feature1_Tag">Pocket &amp; Classic</span></div>
+            </div>
+
+            <!-- Feature 2: Swipe Controls -->
+            <div class="neo-card card-cyan">
+                <div class="card-icon-box">
+                    <i class="bi bi-hand-index-thumb"></i>
+                </div>
+                <h3 class="card-title"><span data-i18n="Qube_Feature2_Title">Smooth Gesture Controls</span></h3>
+                <p class="card-text"><span data-i18n="Qube_Feature2_Desc">Flick, swipe, and rotate layers effortlessly with your finger, mouse, or trackpad.</span></p>
+                <div class="card-tag"><span data-i18n="Qube_Feature2_Tag">Gestures &amp; Physics</span></div>
+            </div>
+
+            <!-- Feature 3: Solver -->
+            <div class="neo-card card-pink">
+                <div class="card-icon-box">
+                    <i class="bi bi-camera-fill"></i>
+                </div>
+                <h3 class="card-title"><span data-i18n="Qube_Feature3_Title">Real-Life Cube Solver</span></h3>
+                <p class="card-text"><span data-i18n="Qube_Feature3_Desc">Have a scrambled cube on your desk? Input its colors into Qube and watch it compute the exact steps to solve it.</span></p>
+                <div class="card-tag"><span data-i18n="Qube_Feature3_Tag">Smart Algorithm</span></div>
+            </div>
+
+            <!-- Feature 4: Auto-solve & Scramble -->
+            <div class="neo-card card-dark">
+                <div class="card-icon-box">
+                    <i class="bi bi-cpu"></i>
+                </div>
+                <h3 class="card-title"><span data-i18n="Qube_Feature4_Title">Auto-Solve &amp; Scramble</span></h3>
+                <p class="card-text"><span data-i18n="Qube_Feature4_Desc">Scramble in a flash with a single tap, or let the solver complete it step-by-step so you can learn the algorithms.</span></p>
+                <div class="card-tag"><span data-i18n="Qube_Feature4_Tag">Step-by-Step Solver</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW THE SOLVER WORKS SECTION -->
+    <section class="solver-flow-section">
+        <div class="solver-banner">
+            <div class="solver-text-col">
+                <span class="banner-pill"><span data-i18n="Qube_Solver_Pill">SOLVER ASSISTANT</span></span>
+                <h2 class="banner-heading"><span data-i18n="Qube_Solver_Heading">Got a Scrambled Real Cube? Qube Solves It for You.</span></h2>
+                <p class="banner-sub">
+                    <span data-i18n="Qube_Solver_Sub">You don't need to be a master of algorithms to see all sides aligned again. Just enter the face colors into the app and follow the 3D solution.</span>
+                </p>
+                <div class="steps-row">
+                    <div class="step-item">
+                        <span class="step-num">1</span>
+                        <div>
+                            <strong><span data-i18n="Qube_Solver_Step1_Title">Paint the Faces</span></strong>
+                            <p><span data-i18n="Qube_Solver_Step1_Desc">Indicate how each sticker is positioned on your physical cube.</span></p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-num">2</span>
+                        <div>
+                            <strong><span data-i18n="Qube_Solver_Step2_Title">Optimized Calculation</span></strong>
+                            <p><span data-i18n="Qube_Solver_Step2_Desc">The algorithm computes the shortest sequence of turns.</span></p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <span class="step-num">3</span>
+                        <div>
+                            <strong><span data-i18n="Qube_Solver_Step3_Title">Follow Step-by-Step</span></strong>
+                            <p><span data-i18n="Qube_Solver_Step3_Desc">Rotate the physical layers as the app guides you.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD CALL TO ACTION -->
+    <section class="qube-bottom-cta">
+        <div class="cta-inner-card">
+            <img src="/images/qube-icon.png" alt="Qube App Icon" class="cta-icon-large" />
+            <h2 class="cta-heading"><span data-i18n="Qube_CTA_Heading">Ready to Solve the Cube?</span></h2>
+            <p class="cta-sub"><span data-i18n="Qube_CTA_Sub">Available for all your favorite screens: mobile, tablet, and desktop.</span></p>
+            
+            <div class="hero-cta-group cta-center">
+                <a href="https://apps.apple.com/br/app/qube-studio-3d-cubo-m%C3%A1gico/id6808970842" class="btn-neo btn-appstore" target="_blank">
+                    <i class="bi bi-apple"></i>
+                    <span><span data-i18n="Qube_Download_AppStore">App Store</span></span>
+                </a>
+                <a href="#" class="btn-neo btn-googleplay" target="_blank">
+                    <i class="bi bi-google-play"></i>
+                    <span><span data-i18n="Qube_Download_GooglePlay">Google Play</span></span>
+                </a>
+                <a href="#" class="btn-neo btn-windows" target="_blank">
+                    <i class="bi bi-windows"></i>
+                    <span><span data-i18n="Qube_Download_Windows">Windows</span></span>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="/js/qube.js"></script>
+
+        </main>
+
+        <footer class="bottom-footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <p>© <span id="footer-year">2021 - 2026</span> Raphael Frei. All rights reserved.</p>
+                    <p class="built-with">Built with <span class="accent">Vanilla JS</span>.</p>
+                </div>
+                <div class="footer-actions">
+                    <div class="language-wrapper">
+                        <div class="culture-selector">
+                            <span class="terminal-comment">// lang:</span>
+                            <a href="#" onclick="setLanguage('en'); return false;" class="lang-link" id="lang-en">en</a>
+                            <span class="selector-separator">|</span>
+                            <a href="#" onclick="setLanguage('pt'); return false;" class="lang-link" id="lang-pt">pt</a>
+                            <span class="selector-separator">|</span>
+                            <a href="#" onclick="setLanguage('es'); return false;" class="lang-link" id="lang-es">es</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

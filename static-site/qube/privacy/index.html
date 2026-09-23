@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qube</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/qube.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="qube-body">
+    <div class="qube-page-wrapper">
+        <header class="qube-header">
+            <div class="qube-header-inner">
+                <a href="/" class="qube-back-badge">
+                    <span class="back-arrow">←</span>
+                    <span class="back-text" data-i18n="Qube_BackHome">Back to Portfolio</span>
+                </a>
+
+                <div class="qube-brand">
+                    <a href="/qube" class="qube-logo-link">
+                        <img src="/images/qube-icon.png" alt="Qube Icon" class="qube-nav-icon" />
+                        <span class="qube-brand-text">QUBE</span>
+                    </a>
+                </div>
+
+                <nav class="qube-nav">
+                    <a href="/qube/privacy" class="qube-nav-btn" data-i18n="Qube_Privacy_Nav">
+                        Privacy Policy
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="qube-main">
+
+
+<div class="qube-privacy-container">
+    <div class="privacy-header">
+        <a href="/Qube" class="privacy-back-btn">
+            ← <span data-i18n="Qube_BackToGame">Qube_BackToGame</span>
+        </a>
+        <div class="privacy-badge"><span data-i18n="Qube_Privacy_Nav">Qube_Privacy_Nav</span></div>
+        <h1 class="privacy-title"><span data-i18n="Qube_Privacy_Title">Privacy Policy for Qube</span></h1>
+        <p class="privacy-subtitle"><span data-i18n="Qube_Privacy_Subtitle">Simple, transparent, and completely offline. Your data stays yours.</span></p>
+    </div>
+
+    <div class="privacy-card">
+        <div class="privacy-section">
+            <div class="section-icon-badge yellow">
+                <i class="bi bi-shield-lock-fill"></i>
+            </div>
+            <div class="section-body">
+                <h2><span data-i18n="Qube_Privacy_Section1_Title">Zero Data Collection</span></h2>
+                <p><span data-i18n="Qube_Privacy_Section1_Desc">Qube does not collect, store, track, or share any personal information, device data, or telemetry.</span></p>
+            </div>
+        </div>
+
+        <div class="privacy-divider"></div>
+
+        <div class="privacy-section">
+            <div class="section-icon-badge cyan">
+                <i class="bi bi-wifi-off"></i>
+            </div>
+            <div class="section-body">
+                <h2><span data-i18n="Qube_Privacy_Section2_Title">Offline &amp; Standalone</span></h2>
+                <p><span data-i18n="Qube_Privacy_Section2_Desc">The game works 100% offline without requiring account registration, cloud sync, or internet access.</span></p>
+            </div>
+        </div>
+
+        <div class="privacy-divider"></div>
+
+        <div class="privacy-section">
+            <div class="section-icon-badge pink">
+                <i class="bi bi-envelope-heart-fill"></i>
+            </div>
+            <div class="section-body">
+                <h2><span data-i18n="Qube_Privacy_Section3_Title">Contact &amp; Support</span></h2>
+                <p><span data-i18n="Qube_Privacy_Section3_Desc">If you have any questions or feedback about Qube, please reach out directly at contact@raphaelfrei.com.br.</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </main>
+
+        <footer class="bottom-footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <p>© <span id="footer-year">2021 - 2026</span> Raphael Frei. All rights reserved.</p>
+                    <p class="built-with">Built with <span class="accent">Vanilla JS</span>.</p>
+                </div>
+                <div class="footer-actions">
+                    <div class="language-wrapper">
+                        <div class="culture-selector">
+                            <span class="terminal-comment">// lang:</span>
+                            <a href="#" onclick="setLanguage('en'); return false;" class="lang-link" id="lang-en">en</a>
+                            <span class="selector-separator">|</span>
+                            <a href="#" onclick="setLanguage('pt'); return false;" class="lang-link" id="lang-pt">pt</a>
+                            <span class="selector-separator">|</span>
+                            <a href="#" onclick="setLanguage('es'); return false;" class="lang-link" id="lang-es">es</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+[
+  {
+    "title": "Ressarcimento ao SUS",
+    "type": "enterprise",
+    "company": "Confidential Lawyer Firm",
+    "role": "Software Architect",
+    "description": "Health insurance platform engineered to control and process public health (SUS) reimbursements for the National Health Agency (ANS).",
+    "tags": [
+      ".NET Avalonia",
+      "SQLite",
+      "EF Core"
+    ],
+    "externalUrl": null,
+    "repositoryUrl": null,
+    "created": "2023-06-01T00:00:00Z",
+    "finished": "2023-12-01T00:00:00Z"
+  },
+  {
+    "title": "RomCrate",
+    "type": "personal",
+    "company": null,
+    "role": "Creator & Solo Developer",
+    "description": "Game collection manager application. Available for Android, iOS and Web.",
+    "tags": [
+      "Blazor",
+      ".NET MAUI",
+      "PostgreSQL",
+      "EF Core"
+    ],
+    "externalUrl": "https://www.romcrate.com",
+    "repositoryUrl": null,
+    "created": "2026-02-01T00:00:00Z",
+    "finished": null
+  },
+  {
+    "title": "LocalGraph",
+    "type": "personal",
+    "company": null,
+    "role": "Creator",
+    "description": "Local SEO viewer for localhost and external websites.",
+    "tags": [
+      ".NET Avalonia",
+      "PostgreSQL",
+      "EF Core"
+    ],
+    "externalUrl": "https://www.getlocalgraph.com",
+    "repositoryUrl": null,
+    "created": null,
+    "finished": null
+  },
+  {
+    "title": "Progress 4GL Replication",
+    "type": "enterprise",
+    "company": "Adient PLC",
+    "role": "IT Analyst",
+    "description": "Implemented Progress OpenEdge Replication across 20+ databases in 5 different sites.",
+    "tags": [
+      "Progress 4GL",
+      "OpenEdge Replication",
+      "DBA"
+    ],
+    "externalUrl": null,
+    "repositoryUrl": null,
+    "created": "2024-06-01T00:00:00Z",
+    "finished": null
+  },
+  {
+    "title": "NPad",
+    "type": "personal",
+    "company": null,
+    "role": "Creator & Solo Developer",
+    "description": "Lightweight File Editor & Notepad for Mac.",
+    "tags": [
+      "SwiftUI"
+    ],
+    "externalUrl": "https://www.getnpad.com",
+    "repositoryUrl": null,
+    "created": "2026-04-01T00:00:00Z",
+    "finished": "2026-05-01T00:00:00Z"
+  },
+  {
+    "title": "Steam Deck Converter",
+    "type": "personal",
+    "company": null,
+    "role": "Creator",
+    "description": "A simple Windows tool to automate the conversion of Steam Deck recordings (.mpd) into playable .mp4 video files using FFmpeg.",
+    "tags": [
+      ".NET WinForms",
+      "FFmpeg"
+    ],
+    "externalUrl": null,
+    "repositoryUrl": "https://github.com/raphaelfrei/sdeck-rec",
+    "created": "2026-01-01T00:00:00Z",
+    "finished": "2026-02-01T00:00:00Z"
+  },
+  {
+    "title": "Health Insurance Mobile App",
+    "type": "enterprise",
+    "company": "Garantia de Saúde",
+    "role": "Mobile Developer",
+    "description": "Mobile application for policyholders, featuring digital ID cards, network search, and real-time integration with core healthcare APIs.",
+    "tags": [
+      ".NET MAUI",
+      "API Integration"
+    ],
+    "externalUrl": null,
+    "repositoryUrl": null,
+    "created": "2024-01-01T00:00:00Z",
+    "finished": null
+  },
+  {
+    "title": "Deck DVR - Record Converter",
+    "type": "personal",
+    "company": null,
+    "role": "Creator",
+    "description": "The easiest way to convert your Steam recordings from .m4s to standard .mp4 format.",
+    "tags": [
+      ".NET MAUI",
+      "C#"
+    ],
+    "externalUrl": "https://deckdvr.com/",
+    "repositoryUrl": null,
+    "created": "2026-06-01T00:00:00Z",
+    "finished": "2026-07-01T00:00:00Z"
+  },
+  {
+    "title": "Nova Imagem",
+    "type": "enterprise",
+    "company": "Nova Imagem",
+    "role": "Web Developer",
+    "description": "Created website for Nova Imagem. Including Google Maps, WhatsApp and Email forms.",
+    "tags": [
+      "Wordpress"
+    ],
+    "externalUrl": null,
+    "repositoryUrl": null,
+    "created": "2019-01-01T00:00:00Z",
+    "finished": "2019-02-01T00:00:00Z"
+  },
+  {
+    "title": "Raphael Frei",
+    "type": "personal",
+    "company": null,
+    "role": "Web Developer",
+    "description": "Created website for Raphael Frei.",
+    "tags": [
+      "Wordpress",
+      ".NET Blazor"
+    ],
+    "externalUrl": "https://www.raphaelfrei.com.br",
+    "repositoryUrl": "https://github.com/raphaelfrei/RaphaelFreiWebBlazor",
+    "created": "2021-11-01T00:00:00Z",
+    "finished": null
+  },
+  {
+    "title": "Active Directory Integration",
+    "type": "enterprise",
+    "company": "Adient PLC",
+    "role": "Software Engineer",
+    "description": "Implemented a centralized authentication system (Single Sign-On), integrating Progress 4GL environment with Microsoft Active Directory for shop floor applications.",
+    "tags": [
+      "Progress 4GL",
+      "C#",
+      "Active Directory",
+      "SSO",
+      "Security"
+    ],
+    "externalUrl": null,
+    "repositoryUrl": null,
+    "created": "2022-04-01T00:00:00Z",
+    "finished": "2022-06-01T00:00:00Z"
+  }
+]

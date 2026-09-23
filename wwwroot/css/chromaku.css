@@ -1,0 +1,734 @@
+/* ==========================================================================
+   Chromaku: Design Moderno & Minimalista
+   Baseado diretamente no CSS e ColorThemeService oficiais do app Chromaku
+   ========================================================================== */
+
+:root {
+    --chroma-bg: #0D0E15;
+    --chroma-surface: #141724;
+    --chroma-surface-light: #1E2336;
+    --chroma-border: #2D3345;
+    --chroma-border-subtle: rgba(255, 255, 255, 0.06);
+    --chroma-text-primary: #F3F4F6;
+    --chroma-text-secondary: #9CA3AF;
+    --chroma-text-muted: #535C6E;
+    --chroma-accent: #6366F1;
+    --chroma-danger: #EF4444;
+
+    --c-teal: #00D2D3;
+    --c-yellow: #FECA57;
+    --c-coral: #FF5E57;
+    --c-blue: #546DE5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.chromaku-theme {
+    background-color: var(--chroma-bg);
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 36px 36px;
+    color: var(--chroma-text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+.chromaku-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.chromaku-header {
+    background: rgba(13, 14, 21, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--chroma-border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.chromaku-header-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chromaku-back-badge {
+    color: var(--chroma-text-secondary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+    transition: color 0.15s ease, background 0.15s ease;
+}
+
+.chromaku-back-badge:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.chromaku-brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+}
+
+.chromaku-nav-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+}
+
+.chromaku-brand-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.chromaku-nav-btn {
+    color: var(--chroma-text-secondary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    border: 1px solid var(--chroma-border);
+    transition: all 0.15s ease;
+}
+
+.chromaku-nav-btn:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Container */
+.chromaku-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 6rem;
+    flex: 1;
+}
+
+/* Hero Section */
+.chromaku-hero {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5.5rem;
+}
+
+@media (max-width: 900px) {
+    .chromaku-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+}
+
+/* Brand Component (Identical to Chromaku App) */
+.menu-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .menu-brand {
+        align-items: center;
+    }
+}
+
+.menu-orbs-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 0.75rem;
+}
+
+.menu-orb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    animation: orbPulse 3s ease-in-out infinite alternate;
+}
+
+.orb-1 { background-color: #FF5E57; animation-delay: 0s; }
+.orb-2 { background-color: #00D2D3; animation-delay: 0.5s; }
+.orb-3 { background-color: #FFC048; animation-delay: 1s; }
+.orb-4 { background-color: #546DE5; animation-delay: 1.5s; }
+
+@keyframes orbPulse {
+    from { transform: translateY(0px) scale(1); }
+    to { transform: translateY(-6px) scale(1.1); }
+}
+
+.menu-title {
+    font-size: clamp(2.8rem, 5vw, 3.8rem);
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin: 0;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #FF5E57, #FFC048, #00D2D3, #546DE5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu-subtitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--chroma-text-secondary);
+    margin-top: 4px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.chromaku-hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--chroma-text-secondary);
+    margin: 0 0 2rem;
+    max-width: 520px;
+}
+
+@media (max-width: 900px) {
+    .chromaku-hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ==========================================================================
+   App Menu Buttons (.menu-actions, .menu-btn, .menu-btn-primary, .menu-btn-daily)
+   ========================================================================== */
+.menu-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 1.25rem;
+    max-width: 480px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .menu-actions {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.menu-btn {
+    display: flex !important;
+    align-items: center !important;
+    padding: 16px 20px !important;
+    border-radius: 20px !important;
+    border: 1px solid var(--chroma-border) !important;
+    cursor: default;
+    text-align: left !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    background: var(--chroma-surface) !important;
+    color: var(--chroma-text-primary) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25) !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+.menu-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.menu-btn-primary {
+    border-color: rgba(0, 210, 211, 0.35) !important;
+}
+
+.menu-btn-primary .btn-icon-box {
+    background: #00D2D3 !important;
+    color: #0F1117 !important;
+}
+
+.menu-btn-daily {
+    border-color: rgba(245, 158, 11, 0.3) !important;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(20, 24, 33, 0.95) 100%) !important;
+}
+
+.menu-btn-daily:hover {
+    border-color: rgba(245, 158, 11, 0.5) !important;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.15) !important;
+}
+
+.menu-btn-daily .btn-icon-box {
+    background: rgba(245, 158, 11, 0.15) !important;
+    color: #FBBF24 !important;
+}
+
+.btn-icon-box {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    border-radius: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 16px !important;
+    flex-shrink: 0 !important;
+    font-size: 1.25rem !important;
+}
+
+.btn-text-box {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
+
+.btn-label {
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    color: var(--chroma-text-primary) !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+}
+
+.btn-sublabel {
+    font-size: 0.78rem !important;
+    color: var(--chroma-text-secondary) !important;
+    margin-top: 3px !important;
+    margin-bottom: 0 !important;
+    line-height: 1.2 !important;
+}
+
+.btn-arrow {
+    color: var(--chroma-text-secondary) !important;
+    opacity: 0.6 !important;
+    font-size: 1.2rem !important;
+    margin-left: auto !important;
+}
+
+/* ==========================================================================
+   Store Action Buttons (Aligned across the full card width in 2 equal columns)
+   ========================================================================== */
+.chromaku-cta-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+    max-width: 480px !important;
+    width: 100% !important;
+    align-items: center !important;
+}
+
+@media (max-width: 900px) {
+    .chromaku-cta-row {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+.btn-appstore,
+.btn-googleplay {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    height: 52px !important;
+    padding: 0 1rem !important;
+    border-radius: 16px !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 1.02rem !important;
+    line-height: 1 !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease, border-color 0.15s ease !important;
+}
+
+.btn-appstore svg,
+.btn-googleplay svg {
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+}
+
+.btn-appstore {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+.btn-appstore:hover {
+    transform: translateY(-2px) !important;
+    opacity: 0.94 !important;
+}
+
+.btn-googleplay {
+    background: var(--chroma-surface) !important;
+    color: #FFFFFF !important;
+    border: 1px solid var(--chroma-border) !important;
+}
+
+.btn-googleplay:hover {
+    transform: translateY(-2px) !important;
+    background: var(--chroma-surface-light) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Authentic Screenshots Showcase */
+.screens-showcase-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.screen-card-frame {
+    flex: 1;
+    max-width: 250px;
+    background: #000;
+    border-radius: 36px;
+    padding: 8px;
+    border: 1px solid var(--chroma-border);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    transition: transform 0.25s ease;
+}
+
+.screen-card-frame:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.screen-card-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 28px;
+}
+
+.screen-caption {
+    font-size: 0.75rem;
+    color: var(--chroma-text-secondary);
+    text-align: center;
+    margin-top: 0.6rem;
+    font-weight: 500;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    border-top: 1px solid var(--chroma-border);
+    padding-top: 4.5rem;
+    margin-bottom: 5rem;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--c-teal);
+    margin-bottom: 0.5rem;
+}
+
+.section-title-clean {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 1rem;
+}
+
+.section-desc-clean {
+    font-size: 1.05rem;
+    color: var(--chroma-text-secondary);
+    max-width: 620px;
+    margin: 0 0 3rem;
+    line-height: 1.6;
+}
+
+.gameplay-rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gameplay-rule-card {
+    background: var(--chroma-surface);
+    border: 1px solid var(--chroma-border);
+    border-radius: 18px;
+    padding: 1.75rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.gameplay-rule-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.rule-number-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.gameplay-rule-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 0.6rem;
+    color: #fff;
+}
+
+.gameplay-rule-card p {
+    font-size: 0.92rem;
+    color: var(--chroma-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Theme Store / Palettes Section (.theme-card, .theme-swatch-row, .theme-swatch-dot)
+   ========================================================================== */
+.palette-section {
+    background: var(--chroma-surface);
+    border: 1px solid var(--chroma-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.palettes-grid-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.theme-card {
+    background: var(--chroma-surface-light) !important;
+    border: 1.5px solid var(--chroma-border) !important;
+    border-radius: 16px !important;
+    padding: 18px !important;
+    transition: all 0.25s ease !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+.theme-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.theme-card.equipped {
+    border-color: var(--chroma-accent) !important;
+    background: rgba(99, 102, 241, 0.09) !important;
+    box-shadow: 0 0 16px rgba(99, 102, 241, 0.2) !important;
+}
+
+.theme-card-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    margin-bottom: 14px !important;
+}
+
+.theme-name {
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    color: var(--chroma-text-primary) !important;
+    display: block !important;
+}
+
+.theme-desc {
+    font-size: 0.8rem !important;
+    color: var(--chroma-text-secondary) !important;
+    margin: 3px 0 0 0 !important;
+    line-height: 1.35 !important;
+}
+
+.theme-price-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    background: rgba(245, 158, 11, 0.12) !important;
+    border: 1px solid rgba(245, 158, 11, 0.35) !important;
+    color: #FBBF24 !important;
+    font-size: 0.78rem !important;
+    font-weight: 800 !important;
+    padding: 3px 9px !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
+}
+
+.theme-price-tag.tag-default {
+    background: rgba(99, 102, 241, 0.15) !important;
+    border-color: rgba(99, 102, 241, 0.4) !important;
+    color: #818CF8 !important;
+}
+
+/* Swatch container: strictly contained, no overflow */
+.theme-swatch-row {
+    display: flex !important;
+    gap: 4px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: rgba(0, 0, 0, 0.45) !important;
+    border-radius: 14px !important;
+    padding: 7px 9px !important;
+    margin: 8px 0 0 0 !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* Dots: scalable, flex: 1 1 0, aspect-ratio 1:1, strictly within bounds */
+.theme-swatch-dot {
+    flex: 1 1 0 !important;
+    max-width: 25px !important;
+    aspect-ratio: 1 / 1 !important;
+    height: auto !important;
+    min-width: 0 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.35) !important;
+    background-image: radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.35), transparent 65%) !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+}
+
+.swatch-symbol {
+    font-size: clamp(0.55rem, 1.2vw, 0.65rem) !important;
+    font-weight: 900 !important;
+    color: rgba(0, 0, 0, 0.8) !important;
+    line-height: 1 !important;
+    user-select: none !important;
+}
+
+.swatch-symbol.symbol-light {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Footer */
+.chromaku-footer {
+    border-top: 1px solid var(--chroma-border);
+    background: var(--chroma-bg);
+    padding: 2.5rem 1.5rem;
+    margin-top: auto;
+}
+
+.chromaku-footer-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-copy {
+    color: var(--chroma-text-muted);
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-link {
+    color: var(--chroma-text-secondary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.15s ease;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+/* Privacy Page */
+.chromaku-privacy-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 6rem;
+    flex: 1;
+}
+
+.privacy-page-header {
+    margin-bottom: 3rem;
+}
+
+.privacy-page-header h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 0.5rem;
+}
+
+.privacy-page-header p {
+    color: var(--chroma-text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.privacy-content-card {
+    background: var(--chroma-surface);
+    border: 1px solid var(--chroma-border);
+    border-radius: 18px;
+    padding: 2.5rem;
+}
+
+.privacy-topic {
+    margin-bottom: 2rem;
+}
+
+.privacy-topic:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-topic h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.5rem;
+}
+
+.privacy-topic p {
+    color: var(--chroma-text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin: 0 0 0.5rem;
+}
+
+.privacy-rule-divider {
+    height: 1px;
+    background: var(--chroma-border);
+    margin: 1.75rem 0;
+}

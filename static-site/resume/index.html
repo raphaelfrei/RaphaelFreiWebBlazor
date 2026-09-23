@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n-title="Resume_PageTitle">Resume | Raphael Frei</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="description" content="Professional background, academic history, and certifications." />
+    <meta property="og:title" content="Resume | Raphael Frei" />
+    <meta property="og:description" content="Professional background, academic history, and certifications." />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="top-header">
+            <div class="header-container">
+                <a href="/" class="brand-logo"><span class="accent">~/</span>raphaelfrei</a>
+                <nav class="header-nav">
+                    <a href="/projects" class="nav-link" data-i18n="Nav_Projects">Projects</a>
+                    <a href="/apps" class="nav-link" data-i18n="Nav_Applications">Applications</a>
+                    <a href="/resume" class="nav-link" data-i18n="Nav_Resume">Resume</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="dev-container">
+                <header class="page-header" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <h1 class="page-title"><span class="accent">cat</span> ./resume.md</h1>
+                        <p class="page-subtitle" data-i18n="Resume_PageSubtitle">Professional background and academic history.</p>
+                    </div>
+                    <a href="/assets/Raphael_Frei_Resume.pdf" download target="_top" class="btn-download-pdf">
+                        <i class="bi bi-file-earmark-pdf"></i>
+                        <span style="margin-left: 0.5rem;" data-i18n="Resume_DownloadPDF">Download Resume (PDF)</span>
+                    </a>
+                </header>
+
+                <div class="resume-content">
+                    <!-- Terminal: Professional Experience -->
+                    <section class="terminal-hero experience-terminal">
+                        <div class="terminal-header">
+                            <div class="window-controls">
+                                <span class="dot close"></span>
+                                <span class="dot minimize"></span>
+                                <span class="dot expand"></span>
+                            </div>
+                            <span class="terminal-title">~/work_experience.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <h2 class="section-title" style="display: none;" data-i18n="Resume_Experience">Professional Experience</h2>
+                            <div class="timeline" id="experience-timeline">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Terminal: Education -->
+                    <section class="terminal-hero education-terminal">
+                        <div class="terminal-header">
+                            <div class="window-controls">
+                                <span class="dot close"></span>
+                                <span class="dot minimize"></span>
+                                <span class="dot expand"></span>
+                            </div>
+                            <span class="terminal-title">~/education.json</span>
+                        </div>
+                        <div class="terminal-body">
+                            <h2 class="section-title" style="display: none;" data-i18n="Resume_Education">Education &amp; Degrees</h2>
+                            <div class="timeline" id="education-timeline">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Terminal: Certifications & Skills -->
+                    <section class="terminal-hero skills-terminal">
+                        <div class="terminal-header">
+                            <div class="window-controls">
+                                <span class="dot close"></span>
+                                <span class="dot minimize"></span>
+                                <span class="dot expand"></span>
+                            </div>
+                            <span class="terminal-title">~/skills.yml</span>
+                        </div>
+                        <div class="terminal-body">
+                            <h2 class="section-title" style="display: none;" data-i18n="Resume_Skills">Certifications &amp; Skills</h2>
+                            <div class="certifications-grid" id="certifications-grid">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Terminal: Languages -->
+                    <section class="terminal-window languages-terminal" style="margin-bottom: 2.5rem;">
+                        <div class="terminal-header">
+                            <div class="window-controls">
+                                <span class="dot close"></span>
+                                <span class="dot minimize"></span>
+                                <span class="dot expand"></span>
+                            </div>
+                            <span class="terminal-title">~/locale.sh</span>
+                        </div>
+                        <div class="terminal-body" style="padding: 1.5rem 2rem;">
+                            <div class="languages-flex" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                                <div class="lang-item">
+                                    <span class="syntax-keyword">export</span> LANG_PT=<span class="string-literal">"Português (Nativo)"</span>
+                                </div>
+                                <div class="lang-item">
+                                    <span class="syntax-keyword">export</span> LANG_EN=<span class="string-literal">"English (C1 Advanced)"</span>
+                                </div>
+                                <div class="lang-item">
+                                    <span class="syntax-keyword">export</span> LANG_ES=<span class="string-literal">"Español (Básico)"</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="bottom-footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <p>© <span id="footer-year">2021 - 2026</span> Raphael Frei. All rights reserved.</p>
+                    <p class="built-with">Built with <span class="accent">Vanilla JS</span>.</p>
+                </div>
+                <div class="footer-actions">
+                    <div class="language-wrapper">
+                        <div class="culture-selector">
+                            <span class="terminal-comment">// lang:</span>
+                            <a href="#" onclick="setLanguage('en'); return false;" class="lang-link" id="lang-en">en</a>
+                            <span class="selector-separator">|</span>
+                            <a href="#" onclick="setLanguage('pt'); return false;" class="lang-link" id="lang-pt">pt</a>
+                            <span class="selector-separator">|</span>
+                            <a href="#" onclick="setLanguage('es'); return false;" class="lang-link" id="lang-es">es</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

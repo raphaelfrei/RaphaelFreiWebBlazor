@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qube</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/qube.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="qube-body">
+    <div class="qube-page-wrapper">
+        <header class="qube-header">
+            <div class="qube-header-inner">
+                <a href="/" class="qube-back-badge">
+                    <span class="back-arrow">←</span>
+                    <span class="back-text" data-i18n="Qube_BackHome">Back to Portfolio</span>
+                </a>
+
+                <div class="qube-brand">
+                    <a href="/qube" class="qube-logo-link">
+                        <img src="/images/qube-icon.png" alt="Qube Icon" class="qube-nav-icon" />
+                        <span class="qube-brand-text">QUBE</span>
+                    </a>
+                </div>
+
+                <nav class="qube-nav">
+                    <a href="/qube/privacy" class="qube-nav-btn" data-i18n="Qube_Privacy_Nav">
+                        Privacy Policy
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="qube-main">
+
+@if (Env.IsDevelopment())
+{
+
+    <div class="studio-container">
+        <div class="studio-header">
+            <div class="studio-badge">APP STORE ASSET GENERATOR</div>
+            <h1 class="studio-title">Qube Screenshot Studio</h1>
+            <p class="studio-sub">Generate pixel-perfect Apple App Store screenshots for iPhone, iPad, and Mac in exact native resolutions.</p>
+        </div>
+
+        <!-- CONTROLS PANEL -->
+        <div class="studio-controls-card">
+            <div class="control-row">
+            <div class="control-group">
+                <label class="ctrl-label">1. Target Device</label>
+                <div class="pill-group">
+                    <button type="button" class="pill-btn active" id="btn-dev-iphone" onclick="setDevice('iphone')">
+                        <i class="bi bi-phone"></i> iPhone 6.5" (1284×2778)
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-dev-iphone67" onclick="setDevice('iphone67')">
+                        <i class="bi bi-phone"></i> iPhone 6.7" (1290×2796)
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-dev-ipad" onclick="setDevice('ipad')">
+                        <i class="bi bi-tablet"></i> iPad (2048×2732)
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-dev-mac" onclick="setDevice('mac')">
+                        <i class="bi bi-laptop"></i> Mac (2880×1800)
+                    </button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="ctrl-label">2. Slide Theme</label>
+                <div class="pill-group">
+                    <button type="button" class="pill-btn active" id="btn-slide-1" onclick="setSlide(1)">
+                        <span class="slide-indicator cyan"></span> Slide 1: Gameplay
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-slide-2" onclick="setSlide(2)">
+                        <span class="slide-indicator pink"></span> Slide 2: Solver
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-slide-3" onclick="setSlide(3)">
+                        <span class="slide-indicator yellow"></span> Slide 3: Models (2x2 &amp; 3x3)
+                    </button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="ctrl-label">3. Image Fit</label>
+                <div class="pill-group">
+                    <button type="button" class="pill-btn active" id="btn-fit-cover" onclick="setFitMode('cover')">
+                        <i class="bi bi-aspect-ratio-fill"></i> Fill / Crop (Cover)
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-fit-contain" onclick="setFitMode('contain')">
+                        <i class="bi bi-arrows-angle-contract"></i> Fit Entire Screen (Contain)
+                    </button>
+                </div>
+            </div>
+
+            <div class="control-group" id="ctrl-group-island">
+                <label class="ctrl-label">4. Dynamic Island</label>
+                <div class="pill-group">
+                    <button type="button" class="pill-btn active" id="btn-island-off" onclick="setIslandMode(false)">
+                        <i class="bi bi-slash-circle"></i> Off (Already in Print)
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-island-on" onclick="setIslandMode(true)">
+                        <i class="bi bi-capsule"></i> Draw Overlay
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-row fields-row">
+            <div class="field-item">
+                <label for="input-badge">Badge Label</label>
+                <input type="text" id="input-badge" class="neo-input" oninput="onTextInputChange()" />
+            </div>
+            <div class="field-item">
+                <label for="input-title">Headline</label>
+                <input type="text" id="input-title" class="neo-input" oninput="onTextInputChange()" />
+            </div>
+            <div class="field-item">
+                <label for="input-sub">Subtitle</label>
+                <input type="text" id="input-sub" class="neo-input" oninput="onTextInputChange()" />
+            </div>
+        </div>
+
+        <div class="control-row upload-row">
+            <!-- PRIMARY UPLOAD (Slide 1, 2, or 2x2 for Slide 3) -->
+            <div class="upload-box" id="upload-primary-box">
+                <label class="upload-label" id="lbl-upload-primary">
+                    <i class="bi bi-cloud-arrow-up-fill"></i>
+                    <span id="txt-upload-primary">Upload Screenshot</span>
+                    <input type="file" id="file-primary" accept="image/*" onchange="handleImageUpload(event, 'primary')" style="display:none;" />
+                </label>
+            </div>
+
+            <!-- SECONDARY UPLOAD (Only for Slide 3: 3x3) -->
+            <div class="upload-box" id="upload-secondary-box" style="display:none;">
+                <label class="upload-label" id="lbl-upload-secondary">
+                    <i class="bi bi-plus-circle-fill"></i>
+                    <span id="txt-upload-secondary">Upload 2nd Screenshot (3x3)</span>
+                    <input type="file" id="file-secondary" accept="image/*" onchange="handleImageUpload(event, 'secondary')" style="display:none;" />
+                </label>
+            </div>
+
+            <div class="action-box">
+                <button type="button" class="btn-neo btn-export" onclick="exportCurrentScreenshot()">
+                    <i class="bi bi-download"></i> Export PNG (<span id="txt-res-label">1290×2796</span>)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PREVIEW STAGE: EXACT WYSIWYG CANVAS -->
+    <div class="preview-stage-container">
+        <div class="stage-info">
+            <span>LIVE 1:1 APPLE STORE CANVAS PREVIEW</span>
+            <span class="res-badge" id="preview-res-badge">iPhone 6.7" — 1290 × 2796 px</span>
+        </div>
+
+        <div class="preview-viewport" id="preview-viewport">
+            <!-- THIS CANVAS IS BOTH THE LIVE PREVIEW AND THE EXACT EXPORT SOURCE -->
+            <canvas id="main-preview-canvas" class="live-canvas-preview"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- COLOCATED JAVASCRIPT -->
+<script src="/js/qube-screenshots.js"></script>
+}
+
+    }
+}
+
+        </main>
+
+        <footer class="bottom-footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <p>© <span id="footer-year">2021 - 2026</span> Raphael Frei. All rights reserved.</p>
+                    <p class="built-with">Built with <span class="accent">Vanilla JS</span>.</p>
+                </div>
+                <div class="footer-actions">
+                    <div class="language-wrapper">
+                        <div class="culture-selector">
+                            <span class="terminal-comment">// lang:</span>
+                            <a href="#" onclick="setLanguage('en'); return false;" class="lang-link" id="lang-en">en</a>
+                            <span class="selector-separator">|</span>
+                            <a href="#" onclick="setLanguage('pt'); return false;" class="lang-link" id="lang-pt">pt</a>
+                            <span class="selector-separator">|</span>
+                            <a href="#" onclick="setLanguage('es'); return false;" class="lang-link" id="lang-es">es</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

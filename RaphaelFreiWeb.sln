@@ -1,6 +1,8 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaphaelFreiWeb", "RaphaelFreiWeb.csproj", "{71952908-1EAA-46BB-9657-9EBE9DBA4DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaphaelFreiWeb.Static", "RaphaelFreiWeb.Static\RaphaelFreiWeb.Static.csproj", "{E915D7A1-4C59-45B1-94E5-B49581A0737C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{71952908-1EAA-46BB-9657-9EBE9DBA4DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71952908-1EAA-46BB-9657-9EBE9DBA4DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71952908-1EAA-46BB-9657-9EBE9DBA4DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E915D7A1-4C59-45B1-94E5-B49581A0737C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E915D7A1-4C59-45B1-94E5-B49581A0737C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E915D7A1-4C59-45B1-94E5-B49581A0737C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E915D7A1-4C59-45B1-94E5-B49581A0737C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

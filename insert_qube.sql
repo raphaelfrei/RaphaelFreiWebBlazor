@@ -23,7 +23,7 @@ INSERT INTO "Apps" (
     '/images/qube-icon.png',
     'https://raphaelfrei.com.br/Qube',
     NULL,
-    NULL,
+    'https://apps.apple.com/br/app/qube-studio-3d-cubo-m%C3%A1gico/id6808970842',
     NULL,
     '["C#", "MonoGame"]',
     '[]',

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not Found - Raphael Frei</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="top-header">
+            <div class="header-container">
+                <a href="/" class="brand-logo"><span class="accent">~/</span>raphaelfrei</a>
+                <nav class="header-nav">
+                    <a href="/projects" class="nav-link" data-i18n="Nav_Projects">Projects</a>
+                    <a href="/apps" class="nav-link" data-i18n="Nav_Applications">Applications</a>
+                    <a href="/resume" class="nav-link" data-i18n="Nav_Resume">Resume</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="not-found-container" style="text-align:center; padding: 4rem 0;">
+                <h1 style="font-size: 4rem; color: var(--accent-color); margin-bottom: 1rem;">404</h1>
+                <h2 data-i18n="NotFound_Title">Page Not Found</h2>
+                <p style="margin-bottom: 2rem;" data-i18n="NotFound_Desc">The page you are looking for doesn't exist or has been moved.</p>
+                <a href="/" class="btn-neo" data-i18n="NotFound_BackHome">Return Home</a>
+            </div>
+        </main>
+        <footer class="bottom-footer">
+            <div class="footer-container">
+                <div class="footer-info">
+                    <p>© <span id="footer-year">2021 - 2026</span> Raphael Frei. All rights reserved.</p>
+                    <p class="built-with">Built with <span class="accent">Vanilla JS</span>.</p>
+                </div>
+                <div class="footer-actions">
+                    <div class="language-wrapper">
+                        <div class="culture-selector">
+                            <span class="terminal-comment">// lang:</span>
+                            <a href="#" onclick="setLanguage('en'); return false;" class="lang-link" id="lang-en">en</a>
+                            <span class="selector-separator">|</span>
+                            <a href="#" onclick="setLanguage('pt'); return false;" class="lang-link" id="lang-pt">pt</a>
+                            <span class="selector-separator">|</span>
+                            <a href="#" onclick="setLanguage('es'); return false;" class="lang-link" id="lang-es">es</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

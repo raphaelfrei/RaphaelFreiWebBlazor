@@ -1,0 +1,122 @@
+[
+  {
+    "name": "RomCrate - Video Game Tracker",
+    "slug": "romcrate",
+    "description": "Welcome to RomCrate, the ultimate hub for your gaming life. Whether you are a hardcore collector or just looking to clear your backlog, RomCrate keeps your entire gaming history organized, synced, and social.",
+    "iconUrl": "https://www.romcrate.com/favicon.png",
+    "websiteUrl": "https://www.romcrate.com",
+    "googlePlayUrl": "https://play.google.com/store/apps/details?id=com.agenciacosmos.romcrate",
+    "appStoreUrl": "https://apps.apple.com/br/app/romcrate-backlog-de-jogos/id6759972404",
+    "microsoftStoreUrl": null,
+    "tags": [
+      "C#",
+      "Blazor",
+      ".NET MAUI",
+      "PostgreSQL"
+    ],
+    "isFeatured": true,
+    "order": 1,
+    "releaseDate": "2026-02-16T00:00:00Z"
+  },
+  {
+    "name": "NPad - Lightweight File Editor & Notepad for Mac",
+    "slug": "npad",
+    "description": "The ideal tool for reading logs and inspecting files without dragging down your system.",
+    "iconUrl": "https://www.getnpad.com/favicon.png",
+    "websiteUrl": "https://www.getnpad.com",
+    "googlePlayUrl": null,
+    "appStoreUrl": "https://apps.apple.com/br/app/npad-file-editor/id6769943495?mt=12",
+    "microsoftStoreUrl": null,
+    "tags": [
+      "SwiftUI"
+    ],
+    "isFeatured": true,
+    "order": 2,
+    "releaseDate": "2026-05-20T00:00:00Z"
+  },
+  {
+    "name": "LocalGraph - URL Inspector",
+    "slug": "localgraph",
+    "description": "Analyze meta tags, Open Graph, Twitter Cards, and all images from any web page in an intuitive and fast visual interface.",
+    "iconUrl": "https://www.getlocalgraph.com/favicon.png",
+    "websiteUrl": "https://www.getlocalgraph.com",
+    "googlePlayUrl": null,
+    "appStoreUrl": null,
+    "microsoftStoreUrl": null,
+    "tags": [
+      "C#",
+      ".NET MAUI"
+    ],
+    "isFeatured": true,
+    "order": 3,
+    "releaseDate": null
+  },
+  {
+    "name": "DeckDVR - Record Converter",
+    "slug": "deckdvr",
+    "description": "The easiest way to convert your Steam recordings from .m4s to standard .mp4 format.",
+    "iconUrl": "https://deckdvr.com/favicon.png",
+    "websiteUrl": "https://deckdvr.com/",
+    "googlePlayUrl": null,
+    "appStoreUrl": null,
+    "microsoftStoreUrl": null,
+    "tags": [
+      "C#",
+      ".NET MAUI"
+    ],
+    "isFeatured": true,
+    "order": 4,
+    "releaseDate": null
+  },
+  {
+    "name": "Pastory - Clipboard Manager",
+    "slug": "pastory",
+    "description": "Your clipboard, upgraded.",
+    "iconUrl": "/images/pastory-icon.png",
+    "websiteUrl": "https://raphaelfrei.com.br/pastory",
+    "googlePlayUrl": null,
+    "appStoreUrl": null,
+    "microsoftStoreUrl": null,
+    "tags": [
+      "SwiftUI"
+    ],
+    "isFeatured": true,
+    "order": 4,
+    "releaseDate": null
+  },
+  {
+    "name": "Qube - 3D Cube Solver & Game",
+    "slug": "qube",
+    "description": "Twist, Scramble & Solve 2x2 and 3x3 cubes with intuitive swipe gestures and real-life cube solver algorithms.",
+    "iconUrl": "/images/qube-icon.png",
+    "websiteUrl": "https://raphaelfrei.com.br/Qube",
+    "googlePlayUrl": null,
+    "appStoreUrl": "https://apps.apple.com/br/app/qube-studio-3d-cubo-m%C3%A1gico/id6808970842",
+    "microsoftStoreUrl": null,
+    "tags": [
+      "C#",
+      "MonoGame"
+    ],
+    "isFeatured": true,
+    "order": 5,
+    "releaseDate": null
+  },
+  {
+    "name": "Chromaku - Color Sudoku",
+    "slug": "chromaku",
+    "description": "Classic Sudoku reinvented through colors. Over 6 exclusive visual palettes, daily challenges, and multiple difficulty levels for iOS and Android.",
+    "iconUrl": "/images/chromaku-icon.svg",
+    "websiteUrl": "/chromaku",
+    "googlePlayUrl": "#",
+    "appStoreUrl": "#",
+    "microsoftStoreUrl": null,
+    "tags": [
+      "iOS",
+      "Android",
+      "Game"
+    ],
+    "isFeatured": true,
+    "order": 6,
+    "releaseDate": "2026-09-01T00:00:00Z"
+  }
+]

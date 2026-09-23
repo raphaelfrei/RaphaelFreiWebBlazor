@@ -79,6 +79,7 @@ namespace RaphaelFreiWeb.Data
                         Description = "Twist, Scramble & Solve 2x2 and 3x3 cubes with intuitive swipe gestures and real-life cube solver algorithms.",
                         IconUrl = "/images/qube-icon.png",
                         WebsiteUrl = "https://raphaelfrei.com.br/Qube",
+                        AppStoreUrl = "https://apps.apple.com/br/app/qube-studio-3d-cubo-m%C3%A1gico/id6808970842",
                         IsFeatured = true,
                         Order = 5,
                         ReleaseDate = null,
