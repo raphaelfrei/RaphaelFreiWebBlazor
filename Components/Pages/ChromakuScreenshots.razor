@@ -1,0 +1,163 @@
+@page "/Chromaku/Screenshots"
+@layout RaphaelFreiWeb.Components.Layout.ChromakuLayout
+
+<PageTitle>Chromaku - Screenshot Studio | App Store &amp; Google Play</PageTitle>
+
+<HeadContent>
+    <link rel="stylesheet" href="/css/chromaku.css?v=4" />
+</HeadContent>
+
+<div class="studio-container">
+    <div class="studio-header">
+        <div class="studio-badge">APP STORE &amp; GOOGLE PLAY ASSET STUDIO</div>
+        <h1 class="studio-title">Chromaku Screenshot Studio</h1>
+        <p class="studio-sub">Generate pixel-perfect App Store and Google Play screenshots in 8 supported languages at exact native device resolutions.</p>
+    </div>
+
+    <!-- CONTROLS PANEL -->
+    <div class="studio-controls-card">
+        <div class="control-row">
+            <!-- 1. TARGET DEVICE -->
+            <div class="control-group">
+                <label class="ctrl-label">1. Target Device</label>
+                <div class="pill-group">
+                    <button type="button" class="pill-btn active" id="btn-dev-iphone67" onclick="setDevice('iphone67')">
+                        iPhone 6.7" (1290×2796)
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-dev-iphone" onclick="setDevice('iphone')">
+                        iPhone 6.5" (1284×2778)
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-dev-ipad" onclick="setDevice('ipad')">
+                        iPad Pro 13" (2048×2732)
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-dev-android" onclick="setDevice('android')">
+                        Android (1080×2400)
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. LANGUAGE SELECTOR (8 SUPPORTED LANGUAGES) -->
+            <div class="control-group">
+                <label class="ctrl-label">2. Store Language</label>
+                <div class="pill-group">
+                    <button type="button" class="pill-btn active" id="btn-lang-en" onclick="setLanguage('en')">
+                        🇬🇧 EN
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-lang-pt" onclick="setLanguage('pt')">
+                        🇧🇷 PT
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-lang-es" onclick="setLanguage('es')">
+                        🇪🇸 ES
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-lang-fr" onclick="setLanguage('fr')">
+                        🇫🇷 FR
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-lang-de" onclick="setLanguage('de')">
+                        🇩🇪 DE
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-lang-ja" onclick="setLanguage('ja')">
+                        🇯🇵 日本語
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-lang-zh-Hant" onclick="setLanguage('zh-Hant')">
+                        🇹🇼 繁中
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-lang-ko" onclick="setLanguage('ko')">
+                        🇰🇷 한국어
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. SLIDE SELECTOR (5 SLIDES) -->
+            <div class="control-group">
+                <label class="ctrl-label">3. Slide Preset</label>
+                <div class="pill-group">
+                    <button type="button" class="pill-btn active" id="btn-slide-1" onclick="setSlide(1)">
+                        <span class="slide-indicator cyan"></span> 1: Novo Jeito
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-slide-2" onclick="setSlide(2)">
+                        <span class="slide-indicator coral"></span> 2: Regras Simples
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-slide-3" onclick="setSlide(3)">
+                        <span class="slide-indicator blue"></span> 3: Do Iniciante ao Mestre
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-slide-4" onclick="setSlide(4)">
+                        <span class="slide-indicator purple"></span> 4: Personalize
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-slide-5" onclick="setSlide(5)">
+                        <span class="slide-indicator gold"></span> 5: Recordes
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. DEVICE MOCKUP FRAMING -->
+            <div class="control-group">
+                <label class="ctrl-label">4. Device Mockup</label>
+                <div class="pill-group">
+                    <button type="button" class="pill-btn active" id="btn-frame-full" onclick="setFrameStyle('full')">
+                        📱 Full Device (Exact Margins)
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-frame-bleed" onclick="setFrameStyle('bleed')">
+                        📐 Bleed Bottom
+                    </button>
+                </div>
+            </div>
+
+            <div class="control-group" id="ctrl-group-island">
+                <label class="ctrl-label">5. Dynamic Island</label>
+                <div class="pill-group">
+                    <button type="button" class="pill-btn active" id="btn-island-off" onclick="setIslandMode(false)">
+                        Off (Native in Print)
+                    </button>
+                    <button type="button" class="pill-btn" id="btn-island-on" onclick="setIslandMode(true)">
+                        Draw Overlay
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDITABLE TEXT FIELDS -->
+        <div class="control-row fields-row">
+            <div class="field-item">
+                <label for="input-title">Headline</label>
+                <input type="text" id="input-title" class="chroma-input" oninput="onTextInputChange()" />
+            </div>
+            <div class="field-item">
+                <label for="input-sub">Subtitle</label>
+                <input type="text" id="input-sub" class="chroma-input" oninput="onTextInputChange()" />
+            </div>
+        </div>
+
+        <!-- ACTION ROW: UPLOAD & EXPORT -->
+        <div class="action-row">
+            <div class="upload-actions">
+                <label class="btn-chroma-outline" style="cursor: pointer;">
+                    <span>📁 Upload Custom Print</span>
+                    <input type="file" id="file-screenshot" accept="image/*" onchange="handleImageUpload(event)" style="display:none;" />
+                </label>
+            </div>
+
+            <div class="export-actions">
+                <button type="button" class="btn-chroma-batch" onclick="exportAllSlides()">
+                    ⚡ Export All 5 Slides
+                </button>
+                <button type="button" class="btn-chroma-primary" onclick="exportCurrentScreenshot()">
+                    ⬇ Export PNG (<span id="txt-res-label">1290×2796</span>)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PREVIEW STAGE: EXACT WYSIWYG CANVAS -->
+    <div class="preview-stage-container">
+        <div class="stage-info">
+            <span>LIVE 1:1 CHROMATIC CANVAS PREVIEW</span>
+            <span class="res-badge" id="preview-res-badge">iPhone 6.7" — 1290 × 2796 px</span>
+        </div>
+
+        <div class="preview-viewport" id="preview-viewport">
+            <canvas id="main-preview-canvas" class="live-canvas-preview"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="/js/chromaku-screenshots.js?v=4"></script>
