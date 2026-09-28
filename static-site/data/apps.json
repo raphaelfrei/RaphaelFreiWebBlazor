@@ -107,8 +107,8 @@
     "description": "Classic Sudoku reinvented through colors. Over 6 exclusive visual palettes, daily challenges, and multiple difficulty levels for iOS and Android.",
     "iconUrl": "/images/chromaku-icon.svg",
     "websiteUrl": "/chromaku",
-    "googlePlayUrl": "#",
-    "appStoreUrl": "#",
+    "googlePlayUrl": "https://play.google.com/store/apps/details?id=com.freilabs.chromaku",
+    "appStoreUrl": "https://apps.apple.com/br/app/chromaku-sudoku-de-cores/id6814273426",
     "microsoftStoreUrl": null,
     "tags": [
       "iOS",
